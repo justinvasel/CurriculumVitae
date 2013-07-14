@@ -1,0 +1,595 @@
+%
+%	Many revisions ago, this CV template came from: 
+%
+%  Jason R. Blevins <jrblevin@sdf.lonestar.org>
+%  http://jrblevin.freeshell.org
+%  Durham, December 12, 2006
+%
+%%---------------------------------------------------------------------------%
+\documentclass[margin,line,letterpaper]{res}
+
+\usepackage{color}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[colorlinks=true, pdfstartview=FitV, linkcolor=blue, citecolor=blue, urlcolor=BrickRed]{hyperref}
+\usepackage{amsmath}
+\usepackage{verbatim}
+\usepackage{multicol}
+\usepackage{booktabs}
+\usepackage[scaled=1]{helvet} % ss
+\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+
+\defaultfontfeatures{Ligatures=TeX}
+
+\newfontfamily\minion[]{Minion Pro}
+\newfontfamily\serifbeta[]{Serif12 Beta}
+\newfontfamily\bask[]{Baskerville}
+\newfontfamily\neue[]{Helvetica Neue}
+\newfontfamily\light[]{Helvetica Neue Light}
+\newfontfamily\ulight[]{Helvetica Neue UltraLight}
+
+%\setmainfont{Baskerville}
+
+%%===========================================================================%%
+
+\begin{document}
+
+%---------------------------------------------------------------------------
+% Document Specific Customizations
+
+% Make lists without bullets and with no indentation
+%\setlength{\leftmargini}{0em}
+%\renewcommand{\labelitemi}{}
+
+\definecolor{light}{gray}{0.3}
+
+
+% Use large bold font for printed name at top of pages
+\renewcommand{\namefont}{\Large\serifbeta}
+\renewcommand{\sectionfont}{\normalsize\minion\sc}
+
+\renewcommand{\textsf}[1]{\neue #1 \normalfont}
+
+\newcommand{\bold}[1]{ {\color{black} \neue #1 \normalfont} }
+\newcommand{\desc}[1]{
+	{\color{light} \bask #1 \normalfont}
+}
+\renewcommand{\date}[1]{#1}
+\newcommand{\itemSep}{\vspace{-0.08in}}
+\newcommand{\sectSep}{\vspace{0.2in}}
+
+
+\newcommand{\object}[3]{
+	\bold{#1} \hfill \date{#3} \\
+	\desc{\emph{#2}}
+	\itemSep
+	
+}
+
+\newcommand{\objectLarge}[4]{
+	\bold{#1} \hfill \date{#4} \\
+	\bold{#2} \\
+	\desc{\emph{#3}}
+	\itemSep
+	
+}
+
+\newcommand{\note}[1]{{\small ( #1 )}}
+
+\newcommand{\noemph}{\rm \bask}
+
+%---------------------------------------------------------------------------
+
+\name{\hspace{0.1in} \Huge Justin A. Vasel}
+
+\begin{resume}
+
+\vspace{0.2in}
+
+\begin{multicols}{2}
+  \textsf{CURRENT} \\
+  {\color{light} \bask
+  371 M. W. Allworth Hall \\
+  1023 University Drive \\
+  Duluth, MN 55812 \\
+  Email: jvasel{@}indiana.edu \normalfont} \\ 
+  \columnbreak
+  
+  \textsf{PERMANENT} \\
+  {\color{light} \bask
+  4122 Mill Run Road \\
+  Eau Claire, WI 54703 \\
+  Phone: +1 (715) 577-2090 \normalfont}
+\end{multicols}
+
+\vspace{-0.2in}
+
+
+\large \emph{\href{http://www.justinvasel.com/}{http://www.JustinVasel.com} } \normalsize
+
+
+%---------------------------------------------------------------------------
+
+% Research Interests
+\section{Research Interests}
+
+\bold{Neutrino Astrophysics} : \desc{supernova detection; high-energy sources}
+\itemSep
+
+\bold{Heliophysics} : \desc{space weather prediction; solar wind generation; sunspots}
+\itemSep
+
+\bold{Public Policy} : \desc{economic and societal effects of science policy in the United States}
+
+\sectSep
+
+
+%---------------------------------------------------------------------------
+
+% EDUCATION
+\section{Education}
+
+
+
+\object																		
+{\emph{Doctor of Philosophy,} Physics}										
+{\rm Indiana University}														
+{August 2013 --- Present}
+
+
+\object																		
+{\emph{Master of Science,} Physics}											
+{\rm University of Minnesota Duluth}											
+{September 2011 --- August 2013}	
+
+
+\object
+{\emph{Bachelor of Science,} Physics}											
+{\rm University of Wisconsin---Eau Claire}									
+{September 2007 --- May 2011}
+
+
+\sectSep
+
+%------------------------------------------------------------------------------
+
+% SCHOLARSHIPS & AWARDS
+\section{Scholarships \\ \& Awards}
+
+
+
+\object
+{AAPT Outstanding Teaching Assistant Award}
+{American Association of Physics Teachers}
+{May 2013}
+
+
+\object
+{Outstanding Graduate Teaching Assistant in Physics}
+{University of Minnesota Duluth}
+{May 2013}
+
+
+\object
+{Student Research Day Poster Competition --- First Place}
+{University of Wisconsin---Eau Claire}
+{May 2011}
+
+
+\object
+{University Physics Competition 2010 --- Silver Medal}
+{\rm \href{http://www.uphysicsc.com/}{http://www.uphysicsc.com/} \note{International}}
+{November 2010}
+
+
+\object
+{Physics Beyond the Classroom}
+{University of Wisconsin---Eau Claire}
+{Fall 2010 --- Spring 2011}
+
+
+
+%------------------------------------------------------------------------------
+\sectSep
+
+%------------------------------------------------------------------------------
+
+% CONFERENCES
+\section{Conferences Attended}
+
+
+
+\object
+{American Physical Society April 2013 Meeting}
+{Poster Presenter}
+{April 2013}
+
+
+\object
+{221$^\text{st}$ American Astronomical Society Meeting}
+{Poster Presenter}
+{January 2013}
+
+
+\object
+{217$^\text{ th}$ American Astronomical Society Meeting}
+{Society of Physics Students Reporter}
+{January 2011}
+
+
+\object
+{41$^\text{st}$ Nobel Conference --- The Legacy of Einstein}
+{}
+{September 2005}
+
+
+
+%------------------------------------------------------------------------------
+\newpage
+
+% RESEARCH
+\section{Research Experience}
+
+
+
+\object
+{The Helium and Lead Observatory (HALO)}
+{SNOLAB --- Lively, Ontario, Canada \noemph
+	\begin{itemize}
+		\item Developing existing Objective-C software to make automated selection cuts to data and to collect diagnostic data from detector hardware
+		\item Designing and implementing experimental infrastructure: ie. local IP networks, hardware monitoring, user interfaces for remote management
+	\end{itemize}
+ }
+{December 2011 --- Present}
+
+
+\objectLarge
+{Determining the Radial Location of the X-ray Emitting}
+{Zones of Spica}
+{University of Wisconsin---Eau Claire, Department of Physics and Astronomy \noemph
+\begin{itemize}
+		\item Combined existing photospheric models for hot stars with a unique H-alpha data set for the B-type star, Spica
+		\item Wrote programs using Mathematica to process and visualize data from photospheric models of hot stars
+	\end{itemize}
+ }
+{January 2008 --- July 2011}
+
+
+\objectLarge
+{Achieving a Circular Orbit Around Neptune}
+{Through Aerobraking}
+{University of Wisconsin---Eau Claire, Department of Physics and Astronomy \noemph
+\begin{itemize}
+		\item Utilized data from Voyager-2 to construct an atmospheric profile of Neptune
+		\item Wrote programs in Mathematica to simulate the process of aerobraking
+	\end{itemize}
+ }
+{November 2010 --- May 2011}
+
+
+%------------------------------------------------------------------------------
+\sectSep
+
+% PROFESSIONAL EXPERIENCE
+\section{Professional Experience}
+
+
+
+\object
+{Astrophysics Writer}
+{\rm \href{http://astrobites.com/}{http://www.astrobites.com/} \noemph \\
+Astrobites is a daily literature journal summarizing new astrophysical research posted to astro-ph. Astrobites is written by graduate students for 	undergraduates.
+	\begin{itemize}
+		\item Regular contributor and editor
+		\item Twelve articles written to date \note{see \emph{Publications}}
+	\end{itemize}
+ }
+{January 2012 --- Present}
+
+
+\object
+{Graduate Teaching Assistant}
+{University of Minnesota Duluth, Department of Physics \noemph
+\begin{itemize}
+		\item Instructor and grader for three weekly lab sections
+		\item Tutor undergraduate students on a weekly basis
+		\item Assist course instructors in grading exams
+	\end{itemize}
+ }
+{September 2011 --- May 2013}
+
+
+\object
+{Sales Associate}
+{Shopko --- Electronics Department, Eau Claire, WI}
+{September 2005 --- August 2011}
+
+
+\object
+{Physics Tutor}
+{University of Wisconsin---Eau Claire, Department of Physics and Astronomy}
+{September 2008 --- December 2008}
+
+
+\object
+{Assistant Teacher}
+{University of Wisconsin---Eau Claire, Summer Science Institute \noemph
+\begin{itemize}
+		\item Helped teach students ( grades 6--12 ) how to build a robot from a kit and program it using BASIC and assisted students in learning how to build a computer from scratch with a hands-on approach
+	\end{itemize}
+ }
+{July 2007}
+
+
+\object
+{Calculus Tutor}
+{Winona State University, Mathematics Department \noemph
+\begin{itemize}
+		\item Developed and implemented methods for teaching differential calculus to a blind student
+	\end{itemize}
+ }
+{October 2006 --- December 2006}
+
+
+\newpage
+
+%------------------------------------------------------------------------------
+\sectSep
+
+% PROFESSIONAL SOCIETIES
+\section{Professional \\ Affiliations}
+
+%\bold{American Association for the Advancement of Science} \desc{Student Member} \\
+%\desc{Sections: Astronomy; Physics; Societal Impacts of Science and Engineering}
+%\itemSep
+
+\bold{American Astronomical Society \desc{\small ( Junior Member )}} \\
+\desc{Solar Physics Division}
+\itemSep
+
+\bold{American Physical Society} \desc{\small ( Student Member )} \\
+\desc{Division of Astrophysics; Division of Particles and Fields}
+\itemSep
+
+\bold{American Association of Physics Teachers} \desc{\small ( Student Member )}
+
+%------------------------------------------------------------------------------
+\sectSep
+
+% TECHNICAL FAMILIARITY
+\section{Technical \\ Familiarity}
+\hspace{-0.13in}
+\color{light}
+\begin{tabular}{llll}
+\bold{Software} & \bold{Languages} & \bold{Operating Systems} \\
+ROOT & C++ & Unix \\
+Geant 4 & Objective-C & Mac OS X \\
+Mathematica & Python & Apple iOS \\
+Adobe Suite & \LaTeX & Windows 98--7 \\
+Gnuplot & MATLAB & \\
+Xcode 4 & html 5, css 3 & \\
+ & Javascript & \\
+\end{tabular}
+\color{black}
+
+
+%------------------------------------------------------------------------------
+
+% PUBLIC LECTURES
+\section{Public \\ Lectures}
+
+\bold{Predicting the Next Galactic Supernova---How \emph{You}} \hfill \date{9 August 2013} \\
+\bold{Can Help \desc{\small( Future Event )}} \\
+\desc{\emph{Chippewa Valley Astronomical Society: Northwoods Starfest 2013} }
+\itemSep
+
+\bold{Under the Hood: Preparing the Helium and Lead} \hfill \date{8 August 2013} \\
+\bold{Observatory for Full Operation \desc{\small( Future Event )}} \\
+\desc{\emph{University of Minnesota Duluth: Thesis Defense (M.S.)} }
+\itemSep
+
+\bold{Astronomically Patient---The Hunt for Galactic Supernovae} \hfill \date{4 April 2013} \\
+\desc{\emph{University of Wisconsin---Eau Claire: Physics Thursday Seminar Series} }
+\itemSep
+
+\bold{Stealthy Neutrinos and the Search for Exploding Stars} \hfill \date{20 March 2013} \\
+\desc{\emph{Eau Claire, WI: ``Ask A Scientist" Seminar Series} }
+\itemSep
+
+\bold{Tornado Physics---A Terrifying Lesson in Fluid Dynamics} \hfill \date{1 March 2013} \\
+\desc{\emph{University of Minnesota Duluth}}
+\itemSep
+
+\bold{The Many Roles of Physicists in Particle Physics Experiments} \hfill \date{15 November 2012} \\
+\desc{\emph{University of Minnesota Duluth}}
+\itemSep
+
+\bold{Searching for Alien Civilizations} \hfill \date{28 April 2012} \\
+\desc{\emph{University of Minnesota Duluth: Astronomy Day}}
+\itemSep
+
+\bold{Space Weather Forecasting} \hfill \date{6 April 2012} \\
+\desc{\emph{University of Minnesota Duluth} }
+\itemSep
+
+\bold{Science in Seattle: The Latest Astronomy Findings from the} \hfill \date{11 February 2011} \\
+\bold{217$^{\text{{}th}}$ AAS Meeting} \\
+\desc{\emph{University of Wisconsin---Eau Claire: Physics Thursday Seminar Series}}
+\itemSep
+
+\bold{The Formation and Evolution of Supermassive Black Holes} \hfill \date{17 December 2010} \\
+\desc{\emph{University of Wisconsin---Eau Claire}}
+\itemSep
+
+\bold{Determining the Radial Location of the X-ray Emitting Zones} \hfill \date{19 November 2009} \\
+\bold{of Spica} \\
+\desc{\emph{University of Wisconsin---Eau Claire: Physics Thursday Seminar Series}}
+
+
+%------------------------------------------------------------------------------
+\newpage
+
+% PUBLICATIONS
+\section{Publications}
+
+\vspace{-0.19in}
+\subsection{\sc Scholarly}
+\bold{Under the Hood: Preparing the Helium and Lead} \hfill \date{15 August 2013} \\
+\bold{Observatory for Full Operation} \desc{\small ( M.S. Thesis )} \\
+\desc{\emph{University of Minnesota Duluth} } 
+\itemSep
+
+\subsection{\sc General}
+\bold{The Great Disco Ball in the Sky} \hfill \date{2 June 2013} \\
+\desc{\emph{Astrobites.com} } 
+\itemSep
+
+\bold{Why Does Nature Form Exoplanets So Easily?} \hfill \date{ 7 May 2013} \\
+\desc{\emph{Astrobites.com} } 
+\itemSep
+
+\bold{How the Sequester Affects Space Science} \hfill \date{6 March 2013} \\
+\desc{\emph{Astrobites.com} } 
+\itemSep
+
+\bold{Introducing: The Over-massive Black Hole} \hfill \date{5 December 2012} \\
+\desc{\emph{Astrobites.com} } 
+\itemSep
+	
+ \bold{NASA Spacecraft Dawn Studies Asteroids Closely} \hfill \date{20 October 2012} \\
+\desc{\emph{Leader-Telegram: Eau Claire, WI} } 
+\itemSep
+
+ \bold{An Unlikely Planetary Nursery} \hfill \date{17 September 2012} \\
+\desc{\emph{Astrobites.com} } 
+\itemSep
+
+ \bold{The REAL Political Science} \hfill \date{17 August 2012} \\
+\desc{\emph{Astrobites.com} }
+\itemSep
+
+ \bold{A Star Screams While Being Devoured by Black Hole} \hfill \date{10 August 2012} \\
+\desc{\emph{Astrobites.com} }
+\itemSep
+
+ \bold{The Study of Climate on Alien Worlds} \hfill \date{21 June 2012} \\
+\desc{\emph{Astrobites.com} }
+\itemSep
+
+ \bold{The Supernova Early Warning System} \hfill \date{24 May 2012} \\
+\desc{\emph{Astrobites.com} }
+\itemSep
+
+ \bold{Stellar Archeology: A Cosmological View of Dwarf Galaxies} \hfill \date{12 April 2012} \\
+\desc{\emph{Astrobites.com} }
+\itemSep
+
+ \bold{Understanding GRBs Through High-Energy Neutrinos} \hfill \date{3 March 2012} \\
+\desc{\emph{Astrobites.com} }
+\itemSep
+
+ \bold{Caught in the Line of Fire: The Giants vs The Jets} \hfill \date{4 February 2012} \\
+\desc{\emph{Astrobites.com} }
+\itemSep
+
+ \bold{Star's Death Visible from Across the Universe} \hfill \date{18 June 2011} \\
+\desc{\emph{Leader-Telegram: Eau Claire, WI} }
+\itemSep
+
+ \bold{Reporting on AAS from the Front Lines} \hfill \date{February 2011} \\
+ \desc{\emph{spsnational.org} }
+
+
+%%---------------------------------------------------------------------------%%
+
+
+%------------------------------------------------------------------------------
+\newpage
+
+% SERVICE
+\section{Service \& Outreach}
+
+\bold{Participant} \hfill \date{March 13, 2013} \\
+\desc{\emph{AAS Congressional Visits Day, Washington, D.C.} }
+\itemSep
+
+\bold{Graduate Student Representative \desc{\footnotesize( Appointed )}} \hfill \date{December 2012 --- Present } \\
+\desc{\emph{Graduate Council, University of Minnesota Duluth} }
+\itemSep
+	
+ \bold{Committee Member \desc{\footnotesize( Appointed )}} \hfill \date{September 2012 --- May 2013 } \\
+\desc{\emph{SCSE Technology Fees Committee, University of Minnesota Duluth} }
+\itemSep
+
+\bold{Judge} \hfill \date{February 2013 } \\
+\desc{\emph{Northeastern Minnesota Regional Science Fair} }
+\itemSep
+
+ \bold{Adobt-A-Physicist} \hfill \date{October 2012 } \\
+ \desc{\emph{\href{http://www.adoptaphysicist.org/}{http://www.adoptaphysicist.org/}}}
+ \itemSep
+
+ \bold{President \desc{\footnotesize( Appointed )}} \hfill \date{December 2011 --- February 2013 } \\
+\desc{\emph{Society of Physics Students, University of Minnesota Duluth}}
+\itemSep
+
+ \bold{Judge} \hfill \date{December 2011 } \\
+ \desc{\emph{Lakeview Christian Academy Science Fair}} 
+ \itemSep
+ 
+ \bold{Volunteer} \hfill \date{May 2011}  \\
+ \desc{\emph{Astronomy Day, University of Wisconsin---Eau Claire}}
+ \itemSep
+
+ \bold{President \desc{\footnotesize( Elected )}} \hfill \date{May 2010 --- May 2011 } \\
+\desc{\emph{Society of Physics Students, University of Wisconsin---Eau Claire} }
+\itemSep
+
+ \bold{Website Administrator \desc{\footnotesize( Elected )}} \hfill \date{May 2008 --- May 2010 } \\
+\desc{\emph{Society of Physics Students, University of Wisconsin---Eau Claire} }
+\itemSep
+
+ \bold{Freshman Senator \desc{\footnotesize( Elected )}} \hfill \date{September 2006 --- May 2007 } \\
+\desc{ \emph{Student Senate, Winona State University}
+	\begin{itemize}
+		\item Cultural Diversity Committee, member
+		\item Election Committee, member
+	\end{itemize}
+} 
+
+%%---------------------------------------------------------------------------%%
+
+\sectSep
+%------------------------------------------------------------------------------
+
+%%---------------------------------------------------------------------------%%
+
+%\section{References}
+%\vspace{-0.14in}
+%\hspace{-0.13in}
+%\begin{tabular}{l l}
+%   	& \\
+%	\bold{Dr. Alec Habig} & \emph{Relation: Research Advisor, Instructor} \\
+%	\desc{habig@d.umn.edu} & \desc{Dr. Habig oversees my work on the HALO} \\
+%	\desc{+1 (218) 726-7214} & \desc{experiment and has had me as a student in the} \\
+%	 & \desc{classroom.} \\
+%
+%	& \\
+%	\bold{Dr. Clarence Virtue} & \emph{Relation: Research Advisor} \\
+%	\desc{cjv@snolab.ca} & \desc{Dr. Virtue introduced me to the work being done on} \\
+%	\desc{+1 (705) 675-1151} & \desc{the HALO experiment at SNOLAB and oversees my} \\
+%	\desc{Ext. 2223} & \desc{contributions to the project.}  \\
+%
+%	 & \\				
+%	\bold{Dr. George Stecher} & \emph{Relation: Former Research Advisor, Instructor} \\
+%	\desc{gstecher@uwec.edu} & \desc{I have taken several classes taught by Dr. Stecher and} \\
+%	\desc{+1 (715) 836-5731} & \desc{he currently oversees one of my research projects. He}  \\
+%				 & \desc{can speak for my ability to work well in a group setting.} \\
+% 
+%\end{tabular}
+
+\end{resume}
+
+\end{document}
+
+%%===========================================================================%%
