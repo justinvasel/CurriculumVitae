@@ -6,7 +6,7 @@
 %  Durham, December 12, 2006
 %
 %%---------------------------------------------------------------------------%
-\documentclass[margin,line,letterpaper]{res}
+\documentclass{cv}
 
 \usepackage{color}
 \usepackage[usenames,dvipsnames]{xcolor}
@@ -37,18 +37,17 @@
 %---------------------------------------------------------------------------
 % Document Specific Customizations
 
-% Make lists without bullets and with no indentation
-%\setlength{\leftmargini}{0em}
-%\renewcommand{\labelitemi}{}
-
 \definecolor{light}{gray}{0.3}
 
 
 % Use large bold font for printed name at top of pages
-\renewcommand{\namefont}{\Large\serifbeta}
+\renewcommand{\namefont}{\serifbeta}
 \renewcommand{\sectionfont}{\normalsize\minion\sc}
 
 \renewcommand{\textsf}[1]{\neue #1 \normalfont}
+
+
+
 
 \newcommand{\bold}[1]{ {\color{black} \neue #1 \normalfont} }
 \newcommand{\desc}[1]{
@@ -56,7 +55,6 @@
 }
 \renewcommand{\date}[1]{#1}
 \newcommand{\itemSep}{\vspace{-0.08in}}
-\newcommand{\sectSep}{\vspace{0.2in}}
 
 
 \newcommand{\object}[3]{
@@ -80,7 +78,7 @@
 
 %---------------------------------------------------------------------------
 
-\name{\hspace{0.1in} \Huge Justin A. Vasel}
+\name{\hspace{0.1in} Justin A. Vasel}
 
 \begin{resume}
 
@@ -121,8 +119,6 @@
 
 \bold{Public Policy} : \desc{economic and societal effects of science policy in the United States}
 
-\sectSep
-
 
 %---------------------------------------------------------------------------
 
@@ -148,8 +144,6 @@
 {\rm University of Wisconsin---Eau Claire}									
 {September 2007 --- May 2011}
 
-
-\sectSep
 
 %------------------------------------------------------------------------------
 
@@ -187,10 +181,6 @@
 {University of Wisconsin---Eau Claire}
 {Fall 2010 --- Spring 2011}
 
-
-
-%------------------------------------------------------------------------------
-\sectSep
 
 %------------------------------------------------------------------------------
 
@@ -268,7 +258,6 @@
 
 
 %------------------------------------------------------------------------------
-\sectSep
 
 % PROFESSIONAL EXPERIENCE
 \section{Professional Experience}
@@ -334,7 +323,6 @@ Astrobites is a daily literature journal summarizing new astrophysical research 
 \newpage
 
 %------------------------------------------------------------------------------
-\sectSep
 
 % PROFESSIONAL SOCIETIES
 \section{Professional \\ Affiliations}
@@ -351,7 +339,6 @@ Astrobites is a daily literature journal summarizing new astrophysical research 
 \bold{American Association of Physics Teachers} \desc{\small ( Student Member )}
 
 %------------------------------------------------------------------------------
-\sectSep
 
 % TECHNICAL FAMILIARITY
 \section{Technical \\ Familiarity}

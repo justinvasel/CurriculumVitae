@@ -193,9 +193,9 @@
 %
 \def\namefont{}
 \def\namesize{\Huge}
+
 \def\@linename{\begingroup
-  \def\\{, }
-  {\namesize\namefont\@name}
+  \namesize\namefont\@name
   \vskip 2pt
   \fullline
   \vskip 2pt
@@ -226,7 +226,7 @@
 \newdimen\resumewidth
 
 \resumewidth=6.5in
-\sectionskip=3.5ex plus 1ex minus -.2ex % values stolen from LaTeX
+\sectionskip=0.4in
 
 \def\newsectionwidth#1{%
 		     \sectionwidth=#1
