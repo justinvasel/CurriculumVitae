@@ -1,19 +1,16 @@
 %
-%	Many revisions ago, this CV template came from: 
+%  Curriculum Vitae LaTeX / XeLaTeX Template
 %
-%  Jason R. Blevins <jrblevin@sdf.lonestar.org>
-%  http://jrblevin.freeshell.org
-%  Durham, December 12, 2006
+%  Justin A. Vasel <justin.vasel@gmail.com>
+%  http://www.justinvasel.com
+%  8 August 2013
 %
 %%---------------------------------------------------------------------------%
+
 \documentclass{cv}
 
-\usepackage{color}
-\usepackage[usenames,dvipsnames]{xcolor}
-\usepackage[colorlinks=true, pdfstartview=FitV, linkcolor=blue, citecolor=blue, urlcolor=BrickRed]{hyperref}
 \usepackage{amsmath}
 \usepackage{verbatim}
-\usepackage{multicol}
 \usepackage{booktabs}
 \usepackage[scaled=1]{helvet} % ss
 \usepackage[T1]{fontenc}
@@ -37,33 +34,26 @@
 %---------------------------------------------------------------------------
 % Document Specific Customizations
 
-\definecolor{light}{gray}{0.3}
-
 
 % Use large bold font for printed name at top of pages
 \renewcommand{\namefont}{\serifbeta}
+\renewcommand{\addressfont}{\bask}
 \renewcommand{\sectionfont}{\normalsize\minion\sc}
-
 \renewcommand{\textsf}[1]{\neue #1 \normalfont}
-
-
+\renewcommand{\date}[1]{#1}
 
 
 \newcommand{\bold}[1]{ {\color{black} \neue #1 \normalfont} }
 \newcommand{\desc}[1]{
 	{\color{light} \bask #1 \normalfont}
 }
-\renewcommand{\date}[1]{#1}
 \newcommand{\itemSep}{\vspace{-0.08in}}
-
-
 \newcommand{\object}[3]{
 	\bold{#1} \hfill \date{#3} \\
 	\desc{\emph{#2}}
 	\itemSep
 	
 }
-
 \newcommand{\objectLarge}[4]{
 	\bold{#1} \hfill \date{#4} \\
 	\bold{#2} \\
@@ -71,39 +61,17 @@
 	\itemSep
 	
 }
-
 \newcommand{\note}[1]{{\small ( #1 )}}
-
 \newcommand{\noemph}{\rm \bask}
 
 %---------------------------------------------------------------------------
 
-\name{\hspace{0.1in} Justin A. Vasel}
+
+
+\name{Justin A. Vasel}
+\website{http://www.justinvasel.com/}{http://www.JustinVasel.com}
 
 \begin{resume}
-
-\vspace{0.2in}
-
-\begin{multicols}{2}
-  \textsf{CURRENT} \\
-  {\color{light} \bask
-  371 M. W. Allworth Hall \\
-  1023 University Drive \\
-  Duluth, MN 55812 \\
-  Email: jvasel{@}indiana.edu \normalfont} \\ 
-  \columnbreak
-  
-  \textsf{PERMANENT} \\
-  {\color{light} \bask
-  4122 Mill Run Road \\
-  Eau Claire, WI 54703 \\
-  Phone: +1 (715) 577-2090 \normalfont}
-\end{multicols}
-
-\vspace{-0.2in}
-
-
-\large \emph{\href{http://www.justinvasel.com/}{http://www.JustinVasel.com} } \normalsize
 
 
 %---------------------------------------------------------------------------

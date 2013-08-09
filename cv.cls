@@ -187,30 +187,121 @@
 
 \nofiles	     % resume's don't need .aux files
 
+\RequirePackage{multicol}
+\RequirePackage{color}
+\RequirePackage[usenames,dvipsnames]{xcolor}
+\RequirePackage[colorlinks=true, pdfstartview=FitV, linkcolor=blue, citecolor=blue, urlcolor=BrickRed]{hyperref}
+
+
+
+%%%%%%%% NAME STUFF %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ======================================================== %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % this is used to print the name and address at the top of
 % the page with a hline in between
 %
 \def\namefont{}
+\def\addressfont{}
 \def\namesize{\Huge}
 
+\definecolor{light}{gray}{0.3}
+
 \def\@linename{\begingroup
-  \namesize\namefont\@name
+  \namesize\namefont\hspace{1ex}\@name
   \vskip 2pt
   \fullline
   \vskip 2pt
+  \vspace{0.2in}
+  \leftskip=0in
   % where do you live?
   \@ifundefined{@addressone}{%
-    % do nothing
+    \normalsize
+    \begin{multicols}{2}
+      \textsf{CURRENT} \\
+      {\color{light} \addressfont
+      371 M. W. Allworth Hall \\
+      1023 University Drive \\
+      Duluth, MN 55812 \\
+      Email: jvasel{@}indiana.edu \normalfont} \\ 
+      \columnbreak
+      
+      \textsf{PERMANENT} \\
+      {\color{light} \addressfont
+      4122 Mill Run Road \\
+      Eau Claire, WI 54703 \\
+      Phone: +1 (715) 577-2090 \normalfont}
+    \end{multicols}
   }{%
-    % PUT CODE HERE
+    %
   }
+  \vspace{-0.2in}
+  \@website
 \endgroup}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% HEADINGS:
-% 
 \let\print@name\@linename
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% use this to define your name
+%
+\def\name#1{\def\@name{#1}}
+\def\@name{}
+
+\def\website#1#2{\def\@website{\normalfont \large \emph{\href{#1}{#2} } \normalsize}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% makes a line of width \textwidth starting at -\hoffset
+%
+\def\fullline{    % hrules only listen to \hoffset
+  \nointerlineskip  % so I have this code   
+  \moveleft\hoffset\vbox{\hrule width\textwidth} 
+  \nointerlineskip
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% use this to define your address, this may be called more than once.
+%
+\let\@addressone\relax
+\let\@addresstwo\relax
+
+\def\address#1{
+  \@ifundefined{@addressone}{\def\@addressone{#1}}{\def\@addresstwo{#1}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% if you want to print your name and address is a slightly
+% different format than sugessted, then this can be used
+% to place it exactly where you want
+%
+\def\opening{
+  \begingroup
+  \leftskip=-\hoffset      % I use leftskip to move things to the left as 
+  \advance\textwidth\hoffset % changing hoffset doesn't work. But this
+  \hsize=\textwidth      % doesn't really work as hboxes are rules
+           % are unaffeted
+  \let\par=\@@par
+  \parindent=0pt
+  \parskip=0pt
+  \print@name
+  \endgroup
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% all of the resume goes in the resume environment
+%
+\newenvironment{resume}{\begingroup
+           \opening
+}{\endgroup}
+
+
+
+
+
+
+%%%%%%%% SECTION STUFF %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ======================================================== %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -356,58 +447,6 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% makes a line of width \textwidth starting at -\hoffset
-%
-\def\fullline{		% hrules only listen to \hoffset
-  \nointerlineskip	% so I have this code	  
-  \moveleft\hoffset\vbox{\hrule width\textwidth} 
-  \nointerlineskip
-}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% use this to define your name
-%
-\def\name#1{\def\@name{#1}}
-
-\def\@name{}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% use this to define your address, this may be called more than once.
-%
-\let\@addressone\relax
-\let\@addresstwo\relax
-
-\def\address#1{
-  \@ifundefined{@addressone}{\def\@addressone{#1}}{\def\@addresstwo{#1}}}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% if you want to print your name and address is a slightly
-% different format than sugessted, then this can be used
-% to place it exactly where you want
-%
-\def\opening{
-  \begingroup
-  \leftskip=-\hoffset	     % I use leftskip to move things to the left as 
-  \advance\textwidth\hoffset % changing hoffset doesn't work. But this
-  \hsize=\textwidth	     % doesn't really work as hboxes are rules
-			     % are unaffeted
-  \let\par=\@@par
-  \parindent=0pt
-  \parskip=0pt
-  \print@name
-  \endgroup
-}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% all of the resume goes in the resume environment
-%
-\newenvironment{resume}{\begingroup
-		       \opening
-}{\endgroup}
-
-% 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % DEFAULTS
 %
 
@@ -425,11 +464,11 @@
 \parskip \baselineskip
 \setcounter{secnumdepth}{0}
 \def\@listI{\leftmargin\leftmargini
-\topsep 0pt 
-\parskip 0pt
-\partopsep 2pt plus 2pt
-\parsep 2pt plus 2pt
-\itemsep \parsep}
+  \topsep 0pt 
+  \parskip 0pt
+  \partopsep 2pt plus 2pt
+  \parsep 2pt plus 2pt
+  \itemsep \parsep}
 
 \pagestyle{empty}  % don't want page numbers
 
