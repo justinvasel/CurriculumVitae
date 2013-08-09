@@ -1,6 +1,8 @@
 Curriculum Vitae (LaTeX)
 ===============
 
+**Code is currently undergoing a major rewrite.** It is very sloppy right now and probably not good to use. Check back in a week or so.
+
 ### Template Structure
 I like clean code. To make it look nice and neat I used a lot of `\newcommand`'s. Be sure you read the preamble carefully so that you understand how the custom envionments work. 
 
