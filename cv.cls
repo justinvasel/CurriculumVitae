@@ -71,40 +71,46 @@
 %
 \def\namefont{}
 \def\addressfont{}
-\def\namesize{\Huge}
+\def\namesize{\fontsize{40pt}{1em}}
+%\def\namesize{\Huge}
 
 \definecolor{light}{gray}{0.3}
 
 \def\@linename{\begingroup
-  \namesize\namefont\hspace{1ex}\@name
+  %\fullline
   \vskip 2pt
-  \fullline
+  \namesize\namefont\hspace{3.5ex} {\@name}
+  \vskip 2pt
+  %\fullline
   \vskip 2pt
   \vspace{0.2in}
   \leftskip=0in
   % where do you live?
   \@ifundefined{@addressone}{%
+  \section{Contact}
     \normalsize
+    \vspace{-0.2in}
     \begin{multicols}{2}
-      \textsf{CURRENT} \\
       {\color{light} \addressfont
-      371 M. W. Allworth Hall \\
-      1023 University Drive \\
-      Duluth, MN 55812 \\
-      Email: jvasel{@}indiana.edu \normalfont} \\ 
+      727 E. Third Street \\
+      Swain Hall West 117 \\
+      Bloomington, IN 47405 \normalfont} \\ 
       \columnbreak
       
-      \textsf{PERMANENT} \\
       {\color{light} \addressfont
-      4122 Mill Run Road \\
-      Eau Claire, WI 54703 \\
-      Phone: +1 (715) 577-2090 \normalfont}
+      \hspace{-0.8in}
+      \begin{tabular}{r l}
+	      Email: & jvasel{@}indiana.edu \\
+	      LinkedIn: & justinvasel \\
+	      Twitter: & @justinvasel 
+      \end{tabular}
+	  \normalfont}
     \end{multicols}
   }{%
     %
   }
   \vspace{-0.2in}
-  \@website
+  %\@website
 \endgroup}
 
 \let\print@name\@linename
@@ -142,7 +148,7 @@
 %
 \def\opening{
   \begingroup
-  \leftskip=-\hoffset      % I use leftskip to move things to the left as 
+  \leftskip=-1.1in%-\hoffset     % I use leftskip to move things to the left as 
   \advance\textwidth\hoffset % changing hoffset doesn't work. But this
   \hsize=\textwidth      % doesn't really work as hboxes are rules
            % are unaffeted

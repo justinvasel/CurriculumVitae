@@ -15,6 +15,7 @@
 \usepackage[scaled=1]{helvet} % ss
 \usepackage[T1]{fontenc}
 \usepackage{fontspec}
+\usepackage[spanish]{babel}
 
 \defaultfontfeatures{Ligatures=TeX}
 
@@ -24,6 +25,9 @@
 \newfontfamily\neue[]{Helvetica Neue}
 \newfontfamily\light[]{Helvetica Neue Light}
 \newfontfamily\ulight[]{Helvetica Neue UltraLight}
+\newfontfamily\ptserif[]{PT Serif}
+\newfontfamily\book[]{Bookman Old Style}
+\newfontfamily\bell[]{Bell MT}
 
 %\setmainfont{Baskerville}
 
@@ -36,6 +40,7 @@
 
 
 % Use large bold font for printed name at top of pages
+%\renewcommand{\namefont}{\serifbeta}
 \renewcommand{\namefont}{\serifbeta}
 \renewcommand{\addressfont}{\bask}
 \renewcommand{\sectionfont}{\normalsize\minion\sc}
@@ -69,7 +74,8 @@
 
 
 \name{Justin A. Vasel}
-\website{http://www.justinvasel.com/}{http://www.JustinVasel.com}
+%\website{http://www.justinvasel.com/}{http://www.JustinVasel.com}
+\website{}{}
 
 \begin{resume}
 
@@ -79,7 +85,7 @@
 % Research Interests
 \section{Research Interests}
 
-\bold{Neutrino Astrophysics} : \desc{supernova detection; high-energy sources}
+\bold{Neutrino Astrophysics} : \desc{supernova detection; oscillation; high-energy sources}
 \itemSep
 
 \bold{Heliophysics} : \desc{space weather prediction; solar wind generation; sunspots}
@@ -97,28 +103,31 @@
 
 \object																		
 {\emph{Doctor of Philosophy,} Physics}										
-{\rm Indiana University}														
+{Indiana University}														
 {August 2013 --- Present}
 
 
 \object																		
 {\emph{Master of Science,} Physics}											
-{\rm University of Minnesota Duluth}											
+{University of Minnesota Duluth}											
 {September 2011 --- August 2013}	
 
 
 \object
 {\emph{Bachelor of Science,} Physics}											
-{\rm University of Wisconsin---Eau Claire}									
+{University of Wisconsin---Eau Claire}									
 {September 2007 --- May 2011}
 
 
 %------------------------------------------------------------------------------
 
-% SCHOLARSHIPS & AWARDS
-\section{Scholarships \\ \& Awards}
+% HONORS & AWARDS
+\section{Honors \\ \& Awards}
 
-
+\object
+{Trevi\~{n}o Service Award}
+{Graduate and Professional Student Organization, Indiana University}
+{April 2014}
 
 \object
 {AAPT Outstanding Teaching Assistant Award}
@@ -140,12 +149,12 @@
 
 \object
 {University Physics Competition 2010 --- Silver Medal}
-{\rm \href{http://www.uphysicsc.com/}{http://www.uphysicsc.com/} \note{International}}
+{\href{http://www.uphysicsc.com/}{http://www.uphysicsc.com/} (International)}
 {November 2010}
 
 
 \object
-{Physics Beyond the Classroom}
+{Physics Beyond the Classroom Scholarship}
 {University of Wisconsin---Eau Claire}
 {Fall 2010 --- Spring 2011}
 
@@ -188,14 +197,21 @@
 % RESEARCH
 \section{Research Experience}
 
-
+\object
+{The NuMI Off-Axis $\nu_e$ Appearance Experiment (NO$\nu$A)}
+{Fermi National Accelerator Laboratory --- Batavia, Illinois \noemph
+\begin{itemize}
+	\item Developed a set of web-based monitoring tools using Python, HTML5, and jQuery
+\end{itemize}
+}
+{May 2014 --- Present}
 
 \object
 {The Helium and Lead Observatory (HALO)}
 {SNOLAB --- Lively, Ontario, Canada \noemph
 	\begin{itemize}
-		\item Developing existing Objective-C software to make automated selection cuts to data and to collect diagnostic data from detector hardware
-		\item Designing and implementing experimental infrastructure: ie. local IP networks, hardware monitoring, user interfaces for remote management
+		\item Developed existing Objective-C software to make automated selection cuts to data and to collect diagnostic data from detector hardware
+		\item Designed and implemented experimental infrastructure: ie. local IP networks, hardware monitoring, user interfaces for remote management
 	\end{itemize}
  }
 {December 2011 --- Present}
@@ -230,27 +246,38 @@
 % PROFESSIONAL EXPERIENCE
 \section{Professional Experience}
 
+\object
+{Graduate Research Associate}
+{Indiana University, Department of Physics \noemph
+ }
+{May 2013 --- Present}
 
+
+\object
+{Graduate Associate Instructor}
+{Indiana University, Department of Physics \noemph
+	\begin{itemize}
+		\item Duties include teaching labs, leading discussion sections, and tutoring.
+	\end{itemize}
+ }
+{August 2013 --- May 2013}
 
 \object
 {Astrophysics Writer}
 {\rm \href{http://astrobites.com/}{http://www.astrobites.com/} \noemph \\
-Astrobites is a daily literature journal summarizing new astrophysical research posted to astro-ph. Astrobites is written by graduate students for 	undergraduates.
+Astrobites is a daily literature journal summarizing new astrophysical research posted to arXiv's astro-ph. Astrobites is written by graduate students for 	undergraduates.
 	\begin{itemize}
-		\item Regular contributor and editor
-		\item Twelve articles written to date \note{see \emph{Publications}}
+		\item Twenty articles written to date (see \emph{Other Writing})
 	\end{itemize}
  }
-{January 2012 --- Present}
+{January 2012 --- October}
 
 
 \object
 {Graduate Teaching Assistant}
 {University of Minnesota Duluth, Department of Physics \noemph
 \begin{itemize}
-		\item Instructor and grader for three weekly lab sections
-		\item Tutor undergraduate students on a weekly basis
-		\item Assist course instructors in grading exams
+		\item Duties included teaching labs, grading, and tutoring.
 	\end{itemize}
  }
 {September 2011 --- May 2013}
@@ -272,7 +299,7 @@ Astrobites is a daily literature journal summarizing new astrophysical research 
 {Assistant Teacher}
 {University of Wisconsin---Eau Claire, Summer Science Institute \noemph
 \begin{itemize}
-		\item Helped teach students ( grades 6--12 ) how to build a robot from a kit and program it using BASIC and assisted students in learning how to build a computer from scratch with a hands-on approach
+		\item Helped teach students (grades 6--12) how to build a robot from a kit and program it using BASIC and assisted students in learning how to build a computer from scratch with a hands-on approach
 	\end{itemize}
  }
 {July 2007}
@@ -295,16 +322,15 @@ Astrobites is a daily literature journal summarizing new astrophysical research 
 % PROFESSIONAL SOCIETIES
 \section{Professional \\ Affiliations}
 
+\bold{American Physical Society \desc{\small ( Student Member )}} \\
+\desc{Division of Astrophysics; Division of Particles and Fields}
+\itemSep
 
 \bold{American Astronomical Society \desc{\small ( Junior Member )}} \\
 \desc{Solar Physics Division}
 \itemSep
 
-\bold{American Physical Society} \desc{\small ( Student Member )} \\
-\desc{Division of Astrophysics; Division of Particles and Fields}
-\itemSep
-
-\bold{American Association of Physics Teachers} \desc{\small ( Student Member )}
+\bold{\color{light}  \emph{American Association of Physics Teachers} \normalfont \desc{\small ( Former Student Member )}}
 
 %------------------------------------------------------------------------------
 
@@ -314,7 +340,7 @@ Astrobites is a daily literature journal summarizing new astrophysical research 
 \color{light}
 \begin{tabular}{llll}
 \bold{Software} & \bold{Languages} & \bold{Operating Systems} \\
-ROOT & C++ & Unix \\
+ROOT & C\minion++\normalfont & Unix \\
 Geant 4 & Objective-C & Mac OS X \\
 Mathematica & Python & Apple iOS \\
 Adobe Suite & \LaTeX & Windows 98--7 \\
@@ -331,13 +357,13 @@ Xcode 4 & html 5, css 3 & \\
 \section{Public \\ Lectures}
 
 \bold{Predicting the Next Galactic Supernova---How \emph{You}} \hfill \date{9 August 2013} \\
-\bold{Can Help \desc{\small( Future Event )}} \\
+\bold{Can Help } \\
 \desc{\emph{Chippewa Valley Astronomical Society: Northwoods Starfest 2013} }
 \itemSep
 
 \bold{Under the Hood: Preparing the Helium and Lead} \hfill \date{8 August 2013} \\
 \bold{Observatory for Full Operation} \\
-\desc{\emph{University of Minnesota Duluth: Thesis Defense (M.S.)} }
+\desc{\emph{University of Minnesota Duluth: M.S. Thesis Defense} }
 \itemSep
 
 \bold{Astronomically Patient---The Hunt for Galactic Supernovae} \hfill \date{4 April 2013} \\
@@ -345,7 +371,7 @@ Xcode 4 & html 5, css 3 & \\
 \itemSep
 
 \bold{Stealthy Neutrinos and the Search for Exploding Stars} \hfill \date{20 March 2013} \\
-\desc{\emph{Eau Claire, WI: ``Ask A Scientist" Seminar Series} }
+\desc{\emph{Eau Claire, WI: ``Ask A Scientist'' Seminar Series} }
 \itemSep
 
 \bold{Tornado Physics---A Terrifying Lesson in Fluid Dynamics} \hfill \date{1 March 2013} \\
@@ -384,108 +410,186 @@ Xcode 4 & html 5, css 3 & \\
 % PUBLICATIONS
 \section{Publications}
 
-\vspace{-0.19in}
-\subsection{\sc Scholarly}
 \bold{Under the Hood: Preparing the Helium and Lead} \hfill \date{15 August 2013} \\
 \bold{Observatory for Full Operation} \desc{\small ( M.S. Thesis )} \\
 \desc{\emph{University of Minnesota Duluth} } 
 \itemSep
 
-\subsection{\sc General}
-\bold{The Great Disco Ball in the Sky} \hfill \date{2 June 2013} \\
-\desc{\emph{Astrobites.com} } 
+B. Montet, N. Chisari, J. Donaldson, C. D. Dressing, C. Faesi, J. T. Fuchs, S. Kohler, E. Lovegrove, E. A. Mills, E. Nesvold, E. R. Newton, A. Olmstead, \textbf{J. A. Vasel}, L. M. Weiss, Astrobites Team, \emph{Updates from Astrobites: The Astro-ph Reader's Digest}, American Astronomical Society Meeting 223 (2014), poster \#445.13
 \itemSep
 
-\bold{Why Does Nature Form Exoplanets So Easily?} \hfill \date{ 7 May 2013} \\
-\desc{\emph{Astrobites.com} } 
-\itemSep
+\textbf{J. A. Vasel}, A. Habig, C. Virtue, \emph{The Helium and Lead Observatory and the Supernova Early Warning System}, American Physical Society Meeting April 2013, poster \#S2.005
 
-\bold{How the Sequester Affects Space Science} \hfill \date{6 March 2013} \\
-\desc{\emph{Astrobites.com} } 
-\itemSep
+\textbf{J. A. Vasel}, C. Faesi, M. Drout, E. R. Newton \emph{Astrobites: The Astro-ph Reader's Digest For Undergraduates}, American Physical Society Meeting April 2013, poster \#E2.015
 
-\bold{Introducing: The Over-massive Black Hole} \hfill \date{5 December 2012} \\
-\desc{\emph{Astrobites.com} } 
-\itemSep
-	
- \bold{NASA Spacecraft Dawn Studies Asteroids Closely} \hfill \date{20 October 2012} \\
-\desc{\emph{Leader-Telegram: Eau Claire, WI} } 
-\itemSep
+\textbf{J. A. Vasel}, HALO Collaboration, SNEWS Collaboration, \emph{The Helium and Lead Observatory and the Supernova Early Warning System}, American Astronomical Society Meeting 221 (2013), poster \#253.25
 
- \bold{An Unlikely Planetary Nursery} \hfill \date{17 September 2012} \\
-\desc{\emph{Astrobites.com} } 
-\itemSep
+M. Drout, \textbf{J. A. Vasel}, C. D. Dressing, D. Gifford, C. Morley, S. Hall, E. R. Newton, Astrobites Team, \emph{Astrobites: The Astro-ph Reader's Digest For Undergraduates}, American Astronomical Society Meeting 221 (2013), poster \#255.11
 
- \bold{The REAL Political Science} \hfill \date{17 August 2012} \\
-\desc{\emph{Astrobites.com} }
-\itemSep
+A. R. Bartlein, N. R. Brewer, \textbf{J. A. Vasel}, \emph{Achieving a Closed Orbit Around Neptune Through Aerobraking}, UW-Eau Claire Student Research Poster Day (2011)
 
- \bold{A Star Screams While Being Devoured by Black Hole} \hfill \date{10 August 2012} \\
-\desc{\emph{Astrobites.com} }
-\itemSep
+\textbf{J. A. Vasel}, G. J. McGill, \emph{Determining the Radial Location of the X-ray Emitting Zones of Spica}, UW-Eau Claire Student Research Poster Day (2011)
 
- \bold{The Study of Climate on Alien Worlds} \hfill \date{21 June 2012} \\
-\desc{\emph{Astrobites.com} }
-\itemSep
+\textbf{J. A. Vasel}, N. A. Miller, \emph{Determining the Radial Location of the X-ray Emitting Zones of Spica}, UW-Eau Claire Student Research Poster Day (2010)
 
- \bold{The Supernova Early Warning System} \hfill \date{24 May 2012} \\
-\desc{\emph{Astrobites.com} }
-\itemSep
-
- \bold{Stellar Archeology: A Cosmological View of Dwarf Galaxies} \hfill \date{12 April 2012} \\
-\desc{\emph{Astrobites.com} }
-\itemSep
-
- \bold{Understanding GRBs Through High-Energy Neutrinos} \hfill \date{3 March 2012} \\
-\desc{\emph{Astrobites.com} }
-\itemSep
-
- \bold{Caught in the Line of Fire: The Giants vs The Jets} \hfill \date{4 February 2012} \\
-\desc{\emph{Astrobites.com} }
-\itemSep
-
- \bold{Star's Death Visible from Across the Universe} \hfill \date{18 June 2011} \\
-\desc{\emph{Leader-Telegram: Eau Claire, WI} }
-\itemSep
-
- \bold{Reporting on AAS from the Front Lines} \hfill \date{February 2011} \\
- \desc{\emph{spsnational.org} }
 
 
 %%---------------------------------------------------------------------------%%
+% PUBLICATIONS
+\section{Other Writing}
+
+\vspace{-0.21in}
+\subsection{\sc Guest Writing}
+
+
+
+\bold{Jupiter's moon has the potential for life} \hfill \date{20 September 2014} \\
+\desc{\emph{Leader-Telegram: Eau Claire, WI} } 
+\itemSep
+
+\bold{NASA Spacecraft Dawn Studies Asteroids Closely} \hfill \date{20 October 2012} \\
+\desc{\emph{Leader-Telegram: Eau Claire, WI} } 
+\itemSep
+
+\bold{Star's Death Visible from Across the Universe} \hfill \date{18 June 2011} \\
+\desc{\emph{Leader-Telegram: Eau Claire, WI} }
+\itemSep
+
+\bold{Reporting on AAS from the Front Lines} \hfill \date{February 2011} \\
+\desc{\emph{spsnational.org} }
+
+\subsection{\sc Astrobites Blog}
+
+\bold{Our Moon, the Cosmic Ray Detector} \hfill \date{16 September 2014}
+\itemSep
+
+\bold{To the Center of The Cold Spot} \hfill \date{30 April 2014}
+\itemSep
+
+\bold{The Echoes of a Supernova} \hfill \date{2 April 2014}
+\itemSep
+
+\bold{Information Preservation and Weather Forecasting for} \hfill \date{31 January 2014 } \\
+\bold{Black Holes}
+\itemSep
+
+\bold{Observing the Next Galactic Supernova} \hfill \date{5 December 2013}
+\itemSep
+
+\bold{Fishing For Neutrinos} \hfill \date{7 November 2013}
+\itemSep
+
+\bold{How to Drag an Asteroid to Earth} \hfill \date{14 August 2013}
+\itemSep
+
+\bold{Cartography of the Local Cosmos} \hfill \date{7 June 2013}
+\itemSep
+
+\bold{The Great Disco Ball in the Sky} \hfill \date{2 June 2013}
+\itemSep
+
+\bold{Why Does Nature Form Exoplanets So Easily?} \hfill \date{7 May 2013}
+\itemSep
+
+\bold{How the Sequester Affects Space Science} \hfill \date{6 March 2013}
+\itemSep
+
+\bold{Introducing: The Over-massive Black Hole} \hfill \date{5 December 2012}
+\itemSep
+
+\bold{An Unlikely Planetary Nursery} \hfill \date{17 September 2012} 
+\itemSep
+
+\bold{The REAL Political Science} \hfill \date{17 August 2012}
+\itemSep
+
+\bold{A Star Screams While Being Devoured by Black Hole} \hfill \date{10 August 2012}
+\itemSep
+
+\bold{The Study of Climate on Alien Worlds} \hfill \date{21 June 2012}
+\itemSep
+
+\bold{The Supernova Early Warning System} \hfill \date{24 May 2012}
+\itemSep
+
+\bold{Stellar Archeology: A Cosmological View of Dwarf Galaxies} \hfill \date{12 April 2012}
+\itemSep
+
+\bold{Understanding GRBs Through High-Energy Neutrinos} \hfill \date{3 March 2012}
+\itemSep
+
+\bold{Caught in the Line of Fire: The Giants vs The Jets} \hfill \date{4 February 2012}
+\itemSep
 
 
 %------------------------------------------------------------------------------
-\newpage
 
 % SERVICE
 \section{Service \& Outreach}
+
+\bold{Search Committee Member} \hfill \date{April 2015 --- Present} \\
+\desc{\emph{Search Committee for the Vice President of Research, Indiana University}
+	}
+\itemSep
+
+\bold{Vice President \desc{\footnotesize( Elected )}} \hfill \date{May 2014 --- May 2015} \\
+\desc{\emph{Graduate and Professional Student Organization, Indiana University}
+	\begin{itemize}
+		\item Chair, Student Affairs Committee
+		\item Representative to the All University Student Association
+	\end{itemize} 
+	}
+\itemSep
+
+\bold{Graduate Student Representative} \hfill \date{September 2014 --- April 2015} \\
+\desc{\emph{Bloomington Faculty Council (BFC), Indiana University} \\
+         \emph{BFC Student Affairs Committee, Indiana University} \\
+         \emph{Campus Curriculum Committee, Indiana University}
+	}
+\itemSep
+
+\bold{Graduate Student Representative} \hfill \date{October 2014 --- January 2015} \\
+\desc{\emph{Student Assistance Initiative, Indiana University}
+	}
+\itemSep
+
+\bold{Physics Graduate Student Representative \desc{\footnotesize( Elected )}} \hfill \date{September 2013 --- April 2014} \\
+\desc{\emph{Graduate and Professional Student Organization, Indiana University} 
+	\begin{itemize}
+		\item Vice Chair, Student Affairs Committee
+	\end{itemize}
+	}
+\itemSep
+
+\bold{Committee Member} \hfill \date{September 2013 --- April 2014} \\
+\desc{\emph{BFC Research Affairs Committee, Indiana University} }
+\itemSep
 
 \bold{Participant} \hfill \date{March 13, 2013} \\
 \desc{\emph{AAS Congressional Visits Day, Washington, D.C.} }
 \itemSep
 
-\bold{Graduate Student Representative \desc{\footnotesize( Appointed )}} \hfill \date{December 2012 --- Present } \\
+\bold{Graduate Student Representative} \hfill \date{December 2012 --- August 2013} \\
 \desc{\emph{Graduate Council, University of Minnesota Duluth} }
 \itemSep
 	
- \bold{Committee Member \desc{\footnotesize( Appointed )}} \hfill \date{September 2012 --- May 2013 } \\
+\bold{Committee Member} \hfill \date{September 2012 --- May 2013} \\
 \desc{\emph{SCSE Technology Fees Committee, University of Minnesota Duluth} }
 \itemSep
 
-\bold{Judge} \hfill \date{February 2013 } \\
+\bold{Judge} \hfill \date{February 2013} \\
 \desc{\emph{Northeastern Minnesota Regional Science Fair} }
 \itemSep
 
- \bold{Adobt-A-Physicist} \hfill \date{October 2012 } \\
- \desc{\emph{\href{http://www.adoptaphysicist.org/}{http://www.adoptaphysicist.org/}}}
+ \bold{Adobt-A-Physicist} \hfill \date{October 2012} \\
+ \desc{\rm \href{http://www.adoptaphysicist.org/}{http://www.adoptaphysicist.org/}}
  \itemSep
 
- \bold{President \desc{\footnotesize( Appointed )}} \hfill \date{December 2011 --- February 2013 } \\
+ \bold{President \desc{\footnotesize( Elected )}} \hfill \date{December 2011 --- February 2013} \\
 \desc{\emph{Society of Physics Students, University of Minnesota Duluth}}
 \itemSep
 
- \bold{Judge} \hfill \date{December 2011 } \\
+ \bold{Judge} \hfill \date{December 2011} \\
  \desc{\emph{Lakeview Christian Academy Science Fair}} 
  \itemSep
  
@@ -493,19 +597,18 @@ Xcode 4 & html 5, css 3 & \\
  \desc{\emph{Astronomy Day, University of Wisconsin---Eau Claire}}
  \itemSep
 
- \bold{President \desc{\footnotesize( Elected )}} \hfill \date{May 2010 --- May 2011 } \\
+ \bold{President \desc{\footnotesize( Elected )}} \hfill \date{May 2010 --- May 2011} \\
 \desc{\emph{Society of Physics Students, University of Wisconsin---Eau Claire} }
 \itemSep
 
- \bold{Website Administrator \desc{\footnotesize( Elected )}} \hfill \date{May 2008 --- May 2010 } \\
+ \bold{Website Administrator \desc{\footnotesize( Elected )}} \hfill \date{May 2008 --- May 2010} \\
 \desc{\emph{Society of Physics Students, University of Wisconsin---Eau Claire} }
 \itemSep
 
- \bold{Freshman Senator \desc{\footnotesize( Elected )}} \hfill \date{September 2006 --- May 2007 } \\
-\desc{ \emph{Student Senate, Winona State University}
+ \bold{Freshman Senator \desc{\footnotesize( Elected )}} \hfill \date{September 2006 --- May 2007} \\
+\desc{\emph{Student Senate, Winona State University}
 	\begin{itemize}
-		\item Cultural Diversity Committee, member
-		\item Election Committee, member
+		\item Cultural Diversity Committee, Election Committee
 	\end{itemize}
 } 
 
