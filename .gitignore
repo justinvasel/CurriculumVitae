@@ -1,8 +1,10 @@
 .DS_Store
+*.aux
+*.fdb_latexmk
+*.fls
+*.html
+*.log
+*.synctex.gz
 refs.tex
-jvasel_cv.aux
-jvasel_cv.fdb_latexmk
-jvasel_cv.synctex.gz
-sig.pdf
-jvasel_cv.log
 res.cls
+sig.pdf
