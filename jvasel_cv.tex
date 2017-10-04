@@ -24,10 +24,6 @@
 \newfontfamily\bask[]{Baskerville}
 \newfontfamily\neue[]{Helvetica Neue}
 \newfontfamily\light[]{Helvetica Neue Light}
-\newfontfamily\ulight[]{Helvetica Neue UltraLight}
-\newfontfamily\ptserif[]{PT Serif}
-\newfontfamily\book[]{Bookman Old Style}
-\newfontfamily\bell[]{Bell MT}
 
 %\setmainfont{Baskerville}
 
@@ -41,7 +37,7 @@
 
 % Use large bold font for printed name at top of pages
 %\renewcommand{\namefont}{\serifbeta}
-\renewcommand{\namefont}{\serifbeta}
+\renewcommand{\namefont}{\centering \serifbeta \sc \huge}
 \renewcommand{\addressfont}{\bask}
 \renewcommand{\sectionfont}{\normalsize\minion\sc}
 \renewcommand{\textsf}[1]{\neue #1 \normalfont}
@@ -83,23 +79,25 @@
 %---------------------------------------------------------------------------
 
 % Research Interests
-\section{Research Interests}
+% \section{Research Interests}
+% 
+% supernova neutrinos \\
+% neutrino astronomy \\
+% neutrino oscillations
 
-\bold{Neutrino Astrophysics} : \desc{supernova detection; oscillation; high-energy sources}
-\itemSep
-
-\bold{Heliophysics} : \desc{space weather prediction; solar wind generation; sunspots}
-\itemSep
-
-\bold{Public Policy} : \desc{economic and societal effects of science policy in the United States}
+% \bold{Neutrino Astrophysics} : \desc{supernova detection; oscillation; high-energy sources}
+% \itemSep
+% 
+% \bold{Heliophysics} : \desc{space weather prediction; solar wind generation; sunspots}
+% \itemSep
+% 
+% \bold{Public Policy} : \desc{economic and societal effects of science policy in the United States}
 
 
 %---------------------------------------------------------------------------
 
 % EDUCATION
 \section{Education}
-
-
 
 \object
 {\emph{Doctor of Philosophy,} Physics}
@@ -128,6 +126,7 @@
 {Trevi\~{n}o Service Award}
 {Graduate and Professional Student Organization, Indiana University}
 {April 2014}
+
 
 \object
 {AAPT Outstanding Teaching Assistant Award}
@@ -162,8 +161,23 @@
 %------------------------------------------------------------------------------
 
 % CONFERENCES
-\section{Conferences Attended}
+\section{Conferences \\ \& Workshops}
 
+\objectLarge
+{INT Workshop (16-61W): Flavor Observations with}
+{Supernova Neutrinos}
+{Speaker}
+{August 2016}
+
+\object
+{Fermilab New Perspectives}
+{Speaker}
+{June 2016}
+
+\object
+{American Physical Society April 2016 Meeting}
+{Speaker}
+{April 2016}
 
 
 \object
@@ -192,10 +206,10 @@
 
 
 %------------------------------------------------------------------------------
-\newpage
+% \newpage
 
 % RESEARCH
-\section{Research Experience}
+\section{Projects}
 
 \object
 {The NuMI Off-Axis $\nu_e$ Appearance Experiment (NO$\nu$A)}
@@ -231,7 +245,7 @@
 {University of Wisconsin---Eau Claire, Department of Physics and Astronomy \noemph
 \begin{itemize}
 		\item Utilized data from Voyager-2 to construct an atmospheric profile of Neptune
-		\item Wrote programs in Mathematica to simulate the process of aerobraking
+		\item Simulated the process of aerobraking with Mathematica.
 	\end{itemize}
  }
 {November 2010 --- May 2011}
@@ -271,11 +285,7 @@ Astrobites is a daily literature journal summarizing new astrophysical research 
 
 \object
 {Graduate Teaching Assistant}
-{University of Minnesota Duluth, Department of Physics \noemph
-\begin{itemize}
-		\item Duties included teaching labs, grading, and tutoring.
-	\end{itemize}
- }
+{University of Minnesota Duluth, Department of Physics}
 {September 2011 --- May 2013}
 
 
@@ -295,7 +305,7 @@ Astrobites is a daily literature journal summarizing new astrophysical research 
 {Assistant Teacher}
 {University of Wisconsin---Eau Claire, Summer Science Institute \noemph
 \begin{itemize}
-		\item Helped teach students (grades 6--12) how to build a robot from a kit and program it using BASIC and assisted students in learning how to build a computer from scratch with a hands-on approach
+		\item Taught students (grades 6--12) to build and program a robot from a kit and to build a computer from scratch using a hands-on approach
 	\end{itemize}
  }
 {July 2007}
@@ -318,8 +328,8 @@ Astrobites is a daily literature journal summarizing new astrophysical research 
 % PROFESSIONAL SOCIETIES
 \section{Professional \\ Affiliations}
 
-\bold{American Physical Society \desc{\small ( Student Member )}} \\
-\desc{Division of Astrophysics; Division of Particles and Fields}
+\bold{American Physical Society \desc{\small ( Early Career Member )}} \\
+\desc{Division of Astrophysics; Division of Particles and Fields; Forum on Graduate Student Affairs}
 \itemSep
 
 \bold{American Association for the Advancement of Science \desc{\small ( Member )}}
@@ -334,15 +344,11 @@ Astrobites is a daily literature journal summarizing new astrophysical research 
 \section{Technical \\ Familiarity}
 \hspace{-0.13in}
 \color{light}
-\begin{tabular}{llll}
-\bold{Software} & \bold{Languages} & \bold{Operating Systems} \\
-ROOT & C\minion++\normalfont & Unix \\
-Geant 4 & Objective-C & Mac OS X \\
-Mathematica & Python & Apple iOS \\
-Adobe Suite & \LaTeX & Windows 98--7 \\
-Gnuplot & MATLAB & \\
-Xcode 4 & html 5, css 3 & \\
- & Javascript & \\
+\begin{tabular}{lllll}
+\bold{Software} & & \bold{Languages} & & \bold{Operating Systems} \\
+ROOT & CVS/SVN/Git & C\minion++\normalfont & \LaTeX & Linux/Unix \\
+Geant4 & Gnuplot & Python & HTML/CSS/JS & MacOS \\
+Mathematica & Xcode & Objective-C & BASH & Apple iOS \\
 \end{tabular}
 \color{black}
 
@@ -350,7 +356,15 @@ Xcode 4 & html 5, css 3 & \\
 %------------------------------------------------------------------------------
 
 % PUBLIC LECTURES
-\section{Public \\ Lectures}
+\section{Public \\ Speaking}
+\bold{Supernovae and Neutrinos: Where Enormous Explosions} \hfill \date{8 January 2017} \\
+\bold{Meet Puny Particles} \\
+\desc{\emph{Fermi National Accelerator Laboratory: ``Ask-A-Scientist'' lecture series}}
+\itemSep
+
+\bold{Towards Supernova Neutrino Detection with the NOvA Detectors} \hfill \date{2 May 2015} \\
+\desc{\emph{Indiana University: Ph.D. candidacy seminar} }
+\itemSep
 
 \bold{Predicting the Next Galactic Supernova---How \emph{You}} \hfill \date{9 August 2013} \\
 \bold{Can Help } \\
@@ -359,15 +373,15 @@ Xcode 4 & html 5, css 3 & \\
 
 \bold{Under the Hood: Preparing the Helium and Lead} \hfill \date{8 August 2013} \\
 \bold{Observatory for Full Operation} \\
-\desc{\emph{University of Minnesota Duluth: M.S. Thesis Defense} }
+\desc{\emph{University of Minnesota Duluth: M.S. thesis defense} }
 \itemSep
 
 \bold{Astronomically Patient---The Hunt for Galactic Supernovae} \hfill \date{4 April 2013} \\
-\desc{\emph{University of Wisconsin---Eau Claire: Physics Thursday Seminar Series} }
+\desc{\emph{University of Wisconsin---Eau Claire: ``Physics Thursday'' seminar series} }
 \itemSep
 
 \bold{Stealthy Neutrinos and the Search for Exploding Stars} \hfill \date{20 March 2013} \\
-\desc{\emph{Eau Claire, WI: ``Ask A Scientist'' Seminar Series} }
+\desc{\emph{Eau Claire, WI: ``Ask-A-Scientist'' lecture series} }
 \itemSep
 
 \bold{Tornado Physics---A Terrifying Lesson in Fluid Dynamics} \hfill \date{1 March 2013} \\
@@ -379,7 +393,7 @@ Xcode 4 & html 5, css 3 & \\
 \itemSep
 
 \bold{Searching for Alien Civilizations} \hfill \date{28 April 2012} \\
-\desc{\emph{University of Minnesota Duluth: Astronomy Day}}
+\desc{\emph{University of Minnesota Duluth: ``Astronomy Day''}}
 \itemSep
 
 \bold{Space Weather Forecasting} \hfill \date{6 April 2012} \\
@@ -388,7 +402,7 @@ Xcode 4 & html 5, css 3 & \\
 
 \bold{Science in Seattle: The Latest Astronomy Findings from the} \hfill \date{11 February 2011} \\
 \bold{217$^{\text{{}th}}$ AAS Meeting} \\
-\desc{\emph{University of Wisconsin---Eau Claire: Physics Thursday Seminar Series}}
+\desc{\emph{University of Wisconsin---Eau Claire: ``Physics Thursday'' seminar series}}
 \itemSep
 
 \bold{The Formation and Evolution of Supermassive Black Holes} \hfill \date{17 December 2010} \\
@@ -397,26 +411,28 @@ Xcode 4 & html 5, css 3 & \\
 
 \bold{Determining the Radial Location of the X-ray Emitting Zones} \hfill \date{19 November 2009} \\
 \bold{of Spica} \\
-\desc{\emph{University of Wisconsin---Eau Claire: Physics Thursday Seminar Series}}
+\desc{\emph{University of Wisconsin---Eau Claire: ``Physics Thursday'' seminar series}}
 
 
 %------------------------------------------------------------------------------
-\newpage
 
 % PUBLICATIONS
 \section{Publications}
 
-\bold{Under the Hood: Preparing the Helium and Lead} \hfill \date{15 August 2013} \\
-\bold{Observatory for Full Operation} \desc{\small ( M.S. Thesis )} \\
-\desc{\emph{University of Minnesota Duluth} }
+The NO$\nu$A Collaboration et al., \emph{Measurement of the neutrino mixing angle $\theta_{23}$ in NO$\nu$A}, arXiv:1701.05891 (2017)
 \itemSep
+
+\textbf{J. A. Vasel}, \emph{Under the Hood: Preparing the Helium and Lead Observatory for Full Operation}, Master of Science in Physics thesis, University of Minnesota Duluth (August 2013)
+\itemSep
+
+\section{Published \\ Abstracts}
 
 B. Montet, N. Chisari, J. Donaldson, C. D. Dressing, C. Faesi, J. T. Fuchs, S. Kohler, E. Lovegrove, E. A. Mills, E. Nesvold, E. R. Newton, A. Olmstead, \textbf{J. A. Vasel}, L. M. Weiss, Astrobites Team, \emph{Updates from Astrobites: The Astro-ph Reader's Digest}, American Astronomical Society Meeting 223 (2014), poster \#445.13
 \itemSep
 
-\textbf{J. A. Vasel}, A. Habig, C. Virtue, \emph{The Helium and Lead Observatory and the Supernova Early Warning System}, American Physical Society Meeting April 2013, poster \#S2.005
+\textbf{J. A. Vasel}, A. Habig, C. Virtue, \emph{The Helium and Lead Observatory and the Supernova Early Warning System}, American Physical Society Meeting (April 2013), poster \#S2.005
 
-\textbf{J. A. Vasel}, C. Faesi, M. Drout, E. R. Newton \emph{Astrobites: The Astro-ph Reader's Digest For Undergraduates}, American Physical Society Meeting April 2013, poster \#E2.015
+\textbf{J. A. Vasel}, C. Faesi, M. Drout, E. R. Newton \emph{Astrobites: The Astro-ph Reader's Digest For Undergraduates}, American Physical Society Meeting (April 2013), poster \#E2.015
 
 \textbf{J. A. Vasel}, HALO Collaboration, SNEWS Collaboration, \emph{The Helium and Lead Observatory and the Supernova Early Warning System}, American Astronomical Society Meeting 221 (2013), poster \#253.25
 
@@ -454,6 +470,7 @@ A. R. Bartlein, N. R. Brewer, \textbf{J. A. Vasel}, \emph{Achieving a Closed Orb
 \bold{Reporting on AAS from the Front Lines} \hfill \date{February 2011} \\
 \desc{\emph{spsnational.org} }
 
+\newpage
 \subsection{\sc Astrobites Blog}
 
 \bold{Our Moon, the Cosmic Ray Detector} \hfill \date{16 September 2014}
@@ -523,6 +540,10 @@ A. R. Bartlein, N. R. Brewer, \textbf{J. A. Vasel}, \emph{Achieving a Closed Orb
 % SERVICE
 \section{Service \& Outreach}
 
+\bold{Young NO$\nu$A Representative \desc{\footnotesize( Elected )}} \hfill \date{June 2016 --- Present} \\
+\desc{\emph{NO$\nu$A Experiment Institutional Board}}
+\itemSep
+
 \bold{Search Committee Member} \hfill \date{April 2015 --- June 2015} \\
 \desc{\emph{Search Committee for the Vice President of Research, Indiana University}
 	}
@@ -539,13 +560,9 @@ A. R. Bartlein, N. R. Brewer, \textbf{J. A. Vasel}, \emph{Achieving a Closed Orb
 
 \bold{Graduate Student Representative} \hfill \date{September 2014 --- April 2015} \\
 \desc{\emph{Bloomington Faculty Council (BFC), Indiana University} \\
-         \emph{BFC Student Affairs Committee, Indiana University} \\
-         \emph{Campus Curriculum Committee, Indiana University}
-	}
-\itemSep
-
-\bold{Graduate Student Representative} \hfill \date{October 2014 --- January 2015} \\
-\desc{\emph{Student Assistance Initiative, Indiana University}
+      \emph{BFC Student Affairs Committee, Indiana University} \\
+      \emph{Campus Curriculum Committee, Indiana University} \\
+      \emph{Student Assistance Initiative, Indiana University}
 	}
 \itemSep
 
