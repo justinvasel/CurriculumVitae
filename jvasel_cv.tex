@@ -1,636 +1,187 @@
-%
-%  Curriculum Vitae LaTeX / XeLaTeX Template
+% /////////////////////////////////////////////////////////////////////////////
+%  My Curriculum Vitae
 %
 %  Justin A. Vasel <justin.vasel@gmail.com>
-%  http://www.justinvasel.com
-%  8 August 2013
+%  https://www.justinvasel.com
+%  4 April 2018
 %
-%%---------------------------------------------------------------------------%
+% /////////////////////////////////////////////////////////////////////////////
 
-\documentclass{cv}
+\documentclass[11pt]{cv}
 
+\usepackage{hyperref}
 \usepackage{amsmath}
-\usepackage{verbatim}
-\usepackage{booktabs}
-\usepackage[scaled=1]{helvet} % ss
-\usepackage[T1]{fontenc}
-\usepackage{fontspec}
 \usepackage[spanish]{babel}
+\usepackage{etaremune}
 
-\defaultfontfeatures{Ligatures=TeX}
-
-\newfontfamily\minion[]{Minion Pro}
-\newfontfamily\serifbeta[]{Serif12 Beta}
-\newfontfamily\bask[]{Baskerville}
-\newfontfamily\neue[]{Helvetica Neue}
-\newfontfamily\light[]{Helvetica Neue Light}
-
-%\setmainfont{Baskerville}
-
-%%===========================================================================%%
-
+% .............................................................................
 \begin{document}
-
-%---------------------------------------------------------------------------
-% Document Specific Customizations
-
-
-% Use large bold font for printed name at top of pages
-%\renewcommand{\namefont}{\serifbeta}
-\renewcommand{\namefont}{\serifbeta \sc \huge}
-\renewcommand{\addressfont}{\bask}
-\renewcommand{\sectionfont}{\normalsize\minion\sc}
-\renewcommand{\textsf}[1]{\neue #1 \normalfont}
-\renewcommand{\date}[1]{#1}
-
-
-\newcommand{\bold}[1]{ {\color{black} \neue #1 \normalfont} }
-\newcommand{\desc}[1]{
-	{\color{light} \bask #1 \normalfont}
-}
-\newcommand{\itemSep}{\vspace{-0.08in}}
-\newcommand{\object}[3]{
-	\bold{#1} \hfill \date{#3} \\
-	\desc{\emph{#2}}
-	\itemSep
-
-}
-\newcommand{\objectLarge}[4]{
-	\bold{#1} \hfill \date{#4} \\
-	\bold{#2} \\
-	\desc{\emph{#3}}
-	\itemSep
-
-}
-\newcommand{\note}[1]{{\small ( #1 )}}
-\newcommand{\noemph}{\rm \bask}
-
-%---------------------------------------------------------------------------
-
-
-
 \name{Justin A. Vasel}
-%\website{http://www.justinvasel.com/}{http://www.JustinVasel.com}
-\website{}{}
 
-\begin{resume}
+\begin{cv}
 
 
-%---------------------------------------------------------------------------
-
-% Research Interests
-% \section{Research Interests}
-% 
-% supernova neutrinos \\
-% neutrino astronomy \\
-% neutrino oscillations
-
-% \bold{Neutrino Astrophysics} : \desc{supernova detection; oscillation; high-energy sources}
-% \itemSep
-% 
-% \bold{Heliophysics} : \desc{space weather prediction; solar wind generation; sunspots}
-% \itemSep
-% 
-% \bold{Public Policy} : \desc{economic and societal effects of science policy in the United States}
+% .............................................................................
+% CONTACT
+\section{Contact}
+\textbf{jvasel@indiana.edu} \\
+\href{https://www.justinvasel.com}{https://www.justinvasel.com}
 
 
-%---------------------------------------------------------------------------
-
+% .............................................................................
 % EDUCATION
 \section{Education}
 
-\object
-{\emph{Doctor of Philosophy,} Physics}
-{Indiana University}
-{August 2013 --- Present}
+\textbf{Ph.D. in Physics}, \emph{Indiana University (IU)} \hfill \emph{In progress} \\
+Thesis advisor: Mark Messier
+
+\textbf{M.S. in Physics}, \emph{University of Minnesota Duluth (UMD)} \hfill August 2013 \\
+Thesis advisor: Alec Habig
+
+\textbf{B.S. in Physics}, \emph{University of Wisconsin--Eau Claire (UWEC)} \hfill May 2011 \\
+Research advisor: Nathan Miller
 
 
-\object
-{\emph{Master of Science,} Physics}
-{University of Minnesota Duluth}
-{September 2011 --- August 2013}
-
-
-\object
-{\emph{Bachelor of Science,} Physics}
-{University of Wisconsin---Eau Claire}
-{September 2007 --- May 2011}
-
-
-%------------------------------------------------------------------------------
-
+% .............................................................................
 % HONORS & AWARDS
-\section{Honors \\ \& Awards}
+\section{Honors \& Awards}
 
-\object
-{Trevi\~{n}o Service Award}
-{Graduate and Professional Student Organization, Indiana University}
-{April 2014}
-
-
-\object
-{AAPT Outstanding Teaching Assistant Award}
-{American Association of Physics Teachers}
-{May 2013}
+\textbf{Trevi\~{n}o Service Award}, IU Grad. and Professional Student Org. \hfill 2014 \\
+\textbf{AAPT Outstanding Teaching Assistant Award} \hfill 2013 \\
+\textbf{Outstanding Graduate Teaching Assistant Award}, UMD \hfill 2013 \\
+\textbf{First Place}, Student Research Day Poster Competition, UWEC \hfill 2011 \\
+\textbf{Silver Medal}, University Physics Competition 2010 \hfill 2010 \\
+\textbf{Physics Beyond The Classroom Scholarship}, UWEC \hfill 2010
 
 
-\object
-{Outstanding Graduate Teaching Assistant in Physics}
-{University of Minnesota Duluth}
-{May 2013}
+% .............................................................................
+% PROFESSIONAL ACTIVITIES
+\section{Professional Activities}
+
+HEP Advocacy Trip, Washington, D.C. \hfill 2017, 2018 \\
+\emph{Annual trip organized by Fermilab's Users Executive Committee to advocate for continued Federal investment in high-energy physics with lawmakers on Capitol Hill.}
+
+43$^{\text{rd}}$ SLAC Summer Institute, SLAC National Laboratory \hfill 2015 \\
+\emph{Attended summer school. Theme: ``The Universe of Neutrinos''.}
 
 
-\object
-{Student Research Day Poster Competition --- First Place}
-{University of Wisconsin---Eau Claire}
-{May 2011}
+% .............................................................................
+% COMMUNITY SERVICE
+\section{Community Service}
 
+President, Young NOvA \hfill May 2017 --- Present
 
-\object
-{University Physics Competition 2010 --- Silver Medal}
-{\href{http://www.uphysicsc.com/}{http://www.uphysicsc.com/} (International)}
-{November 2010}
+Young NOvA Rep., NOvA Institutional Board \hfill May 2016 --- 2017
 
+Member, Search Committee for IU VP of Research \hfill April --- June 2015
 
-\object
-{Physics Beyond the Classroom Scholarship}
-{University of Wisconsin---Eau Claire}
-{Fall 2010 --- Spring 2011}
+Vice President, IU Graduate and Professional \hfill May 2014 --- 2015 \\
+Student Organization (GPSO) \\
+Chair, GPSO Student Affairs Committee \hfill May 2014 --- 2015 \\
+Member, IU Bloomington Faculty Council (BFC) \hfill May 2014 --- 2015 \\
+Member, IU BFC Student Affairs Committee \hfill May 2014 --- 2015 \\
+Member, IU Campus Curriculum Committee \hfill May 2014 --- 2015 \\
+Member, IU Student Assistance Initiative \hfill May 2014 --- 2015
 
+Physics Representative, GPSO \hfill Sept. 2013 --- May 2014 \\
+Vice Chair, GPSO Student Affairs Committee \hfill Sept. 2013 --- May 2014 \\
+Member, IU BFC Research Affairs Committee \hfill Sept. 2013 --- May 2014
 
-%------------------------------------------------------------------------------
+Graduate Student Rep., UMD Graduate Council \hfill Dec. 2012 --- Aug. 2013
 
-% CONFERENCES
-\section{Conferences \\ \& Workshops}
+Member, UMD Technology Fees Committee \hfill Sept. 2012 --- May 2013
 
-\objectLarge
-{INT Workshop (16-61W): Flavor Observations with}
-{Supernova Neutrinos}
-{Speaker}
-{August 2016}
+President, UMD Society of Physics Students \hfill Dec. 2011 --- Feb. 2013
 
-\object
-{Fermilab New Perspectives}
-{Speaker}
-{June 2016}
+President, UW--Eau Claire Society of Physics Students \hfill May 2010 --- 2011 \\
+Webmaster, UW--Eau Claire Society of Physics Students \hfill May 2008 --- 2010
 
-\object
-{American Physical Society April 2016 Meeting}
-{Speaker}
-{April 2016}
-
-
-\object
-{American Physical Society April 2013 Meeting}
-{Poster Presenter}
-{April 2013}
-
-
-\object
-{221$^\text{st}$ American Astronomical Society Meeting}
-{Poster Presenter}
-{January 2013}
-
-
-\object
-{217$^\text{th}$ American Astronomical Society Meeting}
-{Society of Physics Students Reporter}
-{January 2011}
-
-
-\object
-{41$^\text{st}$ Nobel Conference --- The Legacy of Einstein}
-{}
-{September 2005}
-
-
-
-%------------------------------------------------------------------------------
-% \newpage
-
-% RESEARCH
-\section{Projects}
-
-\object
-{The NuMI Off-Axis $\nu_e$ Appearance Experiment (NOvA)}
-{Fermi National Accelerator Laboratory --- Batavia, Illinois \noemph}
-{May 2014 --- Present}
-
-\object
-{The Helium and Lead Observatory (HALO)}
-{SNOLAB --- Lively, Ontario, Canada \noemph
-	\begin{itemize}
-		\item Developed existing Objective-C software to interface with experimental hardware
-		\item Designed and implemented a web-based monitoring tool to be used by experimenters for remote shifting
-	\end{itemize}
- }
-{December 2011 --- Present}
-
-
-\objectLarge
-{Determining the Radial Location of the X-ray Emitting}
-{Zones of Spica}
-{University of Wisconsin---Eau Claire, Department of Physics and Astronomy \noemph
+Senator, Winona State University Student Senate \hfill Sept. 2006 --- May 2007
 \begin{itemize}
-		\item Combined existing photospheric models for hot stars with a unique H-alpha data set for the B-type star, Spica
-		\item Wrote programs using Mathematica to process and visualize data from photospheric models of hot stars
-	\end{itemize}
- }
-{January 2008 --- July 2011}
-
-
-\objectLarge
-{Achieving a Circular Orbit Around Neptune}
-{Through Aerobraking}
-{University of Wisconsin---Eau Claire, Department of Physics and Astronomy \noemph
-\begin{itemize}
-		\item Utilized data from Voyager-2 to construct an atmospheric profile of Neptune
-		\item Simulated the process of aerobraking with Mathematica.
-	\end{itemize}
- }
-{November 2010 --- May 2011}
-
-
-%------------------------------------------------------------------------------
-
-% PROFESSIONAL EXPERIENCE
-\section{Professional Experience}
-
-\object
-{Graduate Research Associate}
-{Indiana University, Department of Physics \noemph
- }
-{May 2013 --- Present}
-
-
-\object
-{Graduate Associate Instructor}
-{Indiana University, Department of Physics \noemph
-	\begin{itemize}
-		\item Duties include teaching labs, leading discussion sections, and tutoring.
-	\end{itemize}
- }
-{August 2013 --- May 2013}
-
-\object
-{Astrophysics Writer}
-{\rm \href{http://astrobites.com/}{http://www.astrobites.com/} \noemph \\
-Astrobites is a daily literature journal summarizing new astrophysical research posted to arXiv's astro-ph. Astrobites is written by graduate students for 	undergraduates.
-	\begin{itemize}
-		\item Twenty articles written to date (see \emph{Other Writing})
-	\end{itemize}
- }
-{January 2012 --- October 2014}
-
-
-\object
-{Graduate Teaching Assistant}
-{University of Minnesota Duluth, Department of Physics}
-{September 2011 --- May 2013}
-
-
-\object
-{Sales Associate}
-{Shopko --- Electronics Department, Eau Claire, WI}
-{September 2005 --- August 2011}
-
-
-\object
-{Physics Tutor}
-{University of Wisconsin---Eau Claire, Department of Physics and Astronomy}
-{September 2008 --- December 2008}
-
-
-\object
-{Assistant Teacher}
-{University of Wisconsin---Eau Claire, Summer Science Institute \noemph
-\begin{itemize}
-		\item Taught students (grades 6--12) to build and program a robot from a kit and to build a computer from scratch using a hands-on approach
-	\end{itemize}
- }
-{July 2007}
-
-
-\object
-{Calculus Tutor}
-{Winona State University, Mathematics Department \noemph
-\begin{itemize}
-		\item Developed and implemented methods for teaching differential calculus to a blind student
-	\end{itemize}
- }
-{October 2006 --- December 2006}
-
-
-\newpage
-
-%------------------------------------------------------------------------------
-
-% PROFESSIONAL SOCIETIES
-\section{Professional \\ Affiliations}
-
-\bold{American Physical Society \desc{\small ( Early Career Member )}} \\
-\desc{Division of Astrophysics; Division of Particles and Fields; Forum on Graduate Student Affairs}
-\itemSep
-
-\bold{American Association for the Advancement of Science \desc{\small ( Member )}}
-
-\bold{American Astronomical Society \desc{\small ( Junior Member )}} \\
-\desc{High Energy Astrophysics Division}
-\itemSep
-
-%------------------------------------------------------------------------------
-
-% TECHNICAL FAMILIARITY
-\section{Technical \\ Familiarity}
-\hspace{-0.13in}
-\color{light}
-\begin{tabular}{lllll}
-\bold{Software} & & \bold{Languages} & & \bold{Operating Systems} \\
-ROOT & CVS/SVN/Git & C\minion++\normalfont & \LaTeX & Linux/Unix \\
-Geant4 & Gnuplot & Python & HTML/CSS/JS & MacOS \\
-Mathematica & Xcode & Objective-C & BASH & Apple iOS \\
-\end{tabular}
-\color{black}
-
-
-%------------------------------------------------------------------------------
-
-% PUBLIC LECTURES
-\section{Public \\ Speaking}
-\bold{Supernovae and Neutrinos: Where Enormous Explosions} \hfill \date{8 January 2017} \\
-\bold{Meet Puny Particles} \\
-\desc{\emph{Fermi National Accelerator Laboratory: ``Ask-A-Scientist'' lecture series}}
-\itemSep
-
-\bold{Towards Supernova Neutrino Detection with the NOvA Detectors} \hfill \date{2 May 2015} \\
-\desc{\emph{Indiana University: Ph.D. candidacy seminar} }
-\itemSep
-
-\bold{Predicting the Next Galactic Supernova---How \emph{You}} \hfill \date{9 August 2013} \\
-\bold{Can Help } \\
-\desc{\emph{Chippewa Valley Astronomical Society: Northwoods Starfest 2013} }
-\itemSep
-
-\bold{Under the Hood: Preparing the Helium and Lead} \hfill \date{8 August 2013} \\
-\bold{Observatory for Full Operation} \\
-\desc{\emph{University of Minnesota Duluth: M.S. thesis defense} }
-\itemSep
-
-\bold{Astronomically Patient---The Hunt for Galactic Supernovae} \hfill \date{4 April 2013} \\
-\desc{\emph{University of Wisconsin---Eau Claire: ``Physics Thursday'' seminar series} }
-\itemSep
-
-\bold{Stealthy Neutrinos and the Search for Exploding Stars} \hfill \date{20 March 2013} \\
-\desc{\emph{Eau Claire, WI: ``Ask-A-Scientist'' lecture series} }
-\itemSep
-
-\bold{Tornado Physics---A Terrifying Lesson in Fluid Dynamics} \hfill \date{1 March 2013} \\
-\desc{\emph{University of Minnesota Duluth}}
-\itemSep
-
-\bold{The Many Roles of Physicists in Particle Physics Experiments} \hfill \date{15 November 2012} \\
-\desc{\emph{University of Minnesota Duluth}}
-\itemSep
-
-\bold{Searching for Alien Civilizations} \hfill \date{28 April 2012} \\
-\desc{\emph{University of Minnesota Duluth: ``Astronomy Day''}}
-\itemSep
-
-\bold{Space Weather Forecasting} \hfill \date{6 April 2012} \\
-\desc{\emph{University of Minnesota Duluth} }
-\itemSep
-
-\bold{Science in Seattle: The Latest Astronomy Findings from the} \hfill \date{11 February 2011} \\
-\bold{217$^{\text{{}th}}$ AAS Meeting} \\
-\desc{\emph{University of Wisconsin---Eau Claire: ``Physics Thursday'' seminar series}}
-\itemSep
-
-\bold{The Formation and Evolution of Supermassive Black Holes} \hfill \date{17 December 2010} \\
-\desc{\emph{University of Wisconsin---Eau Claire}}
-\itemSep
-
-\bold{Determining the Radial Location of the X-ray Emitting Zones} \hfill \date{19 November 2009} \\
-\bold{of Spica} \\
-\desc{\emph{University of Wisconsin---Eau Claire: ``Physics Thursday'' seminar series}}
-
-
-%------------------------------------------------------------------------------
-
-% PUBLICATIONS
-\section{Publications}
-
-The NOvA Collaboration et al., \emph{Measurement of the neutrino mixing angle $\theta_{23}$ in NOvA}, arXiv:1701.05891 (2017)
-\itemSep
-
-\textbf{J. A. Vasel}, \emph{Under the Hood: Preparing the Helium and Lead Observatory for Full Operation}, Master of Science in Physics thesis, University of Minnesota Duluth (August 2013)
-\itemSep
-
-% \section{Published \\ Abstracts}
-% 
-% B. Montet, N. Chisari, J. Donaldson, C. D. Dressing, C. Faesi, J. T. Fuchs, S. Kohler, E. Lovegrove, E. A. Mills, E. Nesvold, E. R. Newton, A. Olmstead, \textbf{J. A. Vasel}, L. M. Weiss, Astrobites Team, \emph{Updates from Astrobites: The Astro-ph Reader's Digest}, American Astronomical Society Meeting 223 (2014), poster \#445.13
-% \itemSep
-% 
-% \textbf{J. A. Vasel}, A. Habig, C. Virtue, \emph{The Helium and Lead Observatory and the Supernova Early Warning System}, American Physical Society Meeting (April 2013), poster \#S2.005
-% 
-% \textbf{J. A. Vasel}, C. Faesi, M. Drout, E. R. Newton \emph{Astrobites: The Astro-ph Reader's Digest For Undergraduates}, American Physical Society Meeting (April 2013), poster \#E2.015
-% 
-% \textbf{J. A. Vasel}, HALO Collaboration, SNEWS Collaboration, \emph{The Helium and Lead Observatory and the Supernova Early Warning System}, American Astronomical Society Meeting 221 (2013), poster \#253.25
-% 
-% M. Drout, \textbf{J. A. Vasel}, C. D. Dressing, D. Gifford, C. Morley, S. Hall, E. R. Newton, Astrobites Team, \emph{Astrobites: The Astro-ph Reader's Digest For Undergraduates}, American Astronomical Society Meeting 221 (2013), poster \#255.11
-% 
-% A. R. Bartlein, N. R. Brewer, \textbf{J. A. Vasel}, \emph{Achieving a Closed Orbit Around Neptune Through Aerobraking}, UW-Eau Claire Student Research Poster Day (2011)
-% 
-% \textbf{J. A. Vasel}, G. J. McGill, \emph{Determining the Radial Location of the X-ray Emitting Zones of Spica}, UW-Eau Claire Student Research Poster Day (2011)
-% 
-% \textbf{J. A. Vasel}, N. A. Miller, \emph{Determining the Radial Location of the X-ray Emitting Zones of Spica}, UW-Eau Claire Student Research Poster Day (2010)
-
-
-
-%%---------------------------------------------------------------------------%%
-% PUBLICATIONS
-\section{Other Writing}
-
-\vspace{-0.21in}
-\subsection{\sc Guest Writing}
-
-
-
-\bold{Jupiter's moon has the potential for life} \hfill \date{20 September 2014} \\
-\desc{\emph{Leader-Telegram: Eau Claire, WI} }
-\itemSep
-
-\bold{NASA Spacecraft Dawn Studies Asteroids Closely} \hfill \date{20 October 2012} \\
-\desc{\emph{Leader-Telegram: Eau Claire, WI} }
-\itemSep
-
-\bold{Star's Death Visible from Across the Universe} \hfill \date{18 June 2011} \\
-\desc{\emph{Leader-Telegram: Eau Claire, WI} }
-\itemSep
-
-\bold{Reporting on AAS from the Front Lines} \hfill \date{February 2011} \\
-\desc{\emph{spsnational.org} }
-
-\newpage
-\subsection{\sc Astrobites Blog}
-
-\bold{Our Moon, the Cosmic Ray Detector} \hfill \date{16 September 2014}
-\itemSep
-
-\bold{To the Center of The Cold Spot} \hfill \date{30 April 2014}
-\itemSep
-
-\bold{The Echoes of a Supernova} \hfill \date{2 April 2014}
-\itemSep
-
-\bold{Information Preservation and Weather Forecasting for} \hfill \date{31 January 2014 } \\
-\bold{Black Holes}
-\itemSep
-
-\bold{Observing the Next Galactic Supernova} \hfill \date{5 December 2013}
-\itemSep
-
-\bold{Fishing For Neutrinos} \hfill \date{7 November 2013}
-\itemSep
-
-\bold{How to Drag an Asteroid to Earth} \hfill \date{14 August 2013}
-\itemSep
-
-\bold{Cartography of the Local Cosmos} \hfill \date{7 June 2013}
-\itemSep
-
-\bold{The Great Disco Ball in the Sky} \hfill \date{2 June 2013}
-\itemSep
-
-\bold{Why Does Nature Form Exoplanets So Easily?} \hfill \date{7 May 2013}
-\itemSep
-
-\bold{How the Sequester Affects Space Science} \hfill \date{6 March 2013}
-\itemSep
-
-\bold{Introducing: The Over-massive Black Hole} \hfill \date{5 December 2012}
-\itemSep
-
-\bold{An Unlikely Planetary Nursery} \hfill \date{17 September 2012}
-\itemSep
-
-\bold{The REAL Political Science} \hfill \date{17 August 2012}
-\itemSep
-
-\bold{A Star Screams While Being Devoured by Black Hole} \hfill \date{10 August 2012}
-\itemSep
-
-\bold{The Study of Climate on Alien Worlds} \hfill \date{21 June 2012}
-\itemSep
-
-\bold{The Supernova Early Warning System} \hfill \date{24 May 2012}
-\itemSep
-
-\bold{Stellar Archeology: A Cosmological View of Dwarf Galaxies} \hfill \date{12 April 2012}
-\itemSep
-
-\bold{Understanding GRBs Through High-Energy Neutrinos} \hfill \date{3 March 2012}
-\itemSep
-
-\bold{Caught in the Line of Fire: The Giants vs The Jets} \hfill \date{4 February 2012}
-\itemSep
-
-
-%------------------------------------------------------------------------------
-
-% SERVICE
-\section{Service \& Outreach}
-
-\bold{President} \desc{\footnotesize( Elected )} \hfill \date{May 2017 --- Present} \\
-\desc{\emph{Young NOvA}}
-
-\bold{Young NOvA Representative \desc{\footnotesize( Elected )}} \hfill \date{June 2016 --- May 2017} \\
-\desc{\emph{NOvA Experiment Institutional Board}}
-\itemSep
-
-\bold{Search Committee Member} \hfill \date{April 2015 --- June 2015} \\
-\desc{\emph{Search Committee for the Vice President of Research, Indiana University}
-	}
-\itemSep
-
-\bold{Vice President \desc{\footnotesize( Elected )}} \hfill \date{May 2014 --- May 2015} \\
-\desc{\emph{Graduate and Professional Student Organization, Indiana University}
-	\begin{itemize}
-		\item Chair, Student Affairs Committee
-		\item Representative to the All University Student Association
-	\end{itemize}
-	}
-\itemSep
-
-\bold{Graduate Student Representative} \hfill \date{September 2014 --- April 2015} \\
-\desc{\emph{Bloomington Faculty Council (BFC), Indiana University} \\
-      \emph{BFC Student Affairs Committee, Indiana University} \\
-      \emph{Campus Curriculum Committee, Indiana University} \\
-      \emph{Student Assistance Initiative, Indiana University}
-	}
-\itemSep
-
-\bold{Physics Graduate Student Representative \desc{\footnotesize( Elected )}} \hfill \date{September 2013 --- April 2014} \\
-\desc{\emph{Graduate and Professional Student Organization, Indiana University}
-	\begin{itemize}
-		\item Vice Chair, Student Affairs Committee
-	\end{itemize}
-	}
-\itemSep
-
-\bold{Committee Member} \hfill \date{September 2013 --- April 2014} \\
-\desc{\emph{BFC Research Affairs Committee, Indiana University} }
-\itemSep
-
-\bold{Participant} \hfill \date{March 13, 2013} \\
-\desc{\emph{AAS Congressional Visits Day, Washington, D.C.} }
-\itemSep
-
-\bold{Graduate Student Representative} \hfill \date{December 2012 --- August 2013} \\
-\desc{\emph{Graduate Council, University of Minnesota Duluth} }
-\itemSep
-
-\bold{Committee Member} \hfill \date{September 2012 --- May 2013} \\
-\desc{\emph{SCSE Technology Fees Committee, University of Minnesota Duluth} }
-\itemSep
-
-\bold{Judge} \hfill \date{February 2013} \\
-\desc{\emph{Northeastern Minnesota Regional Science Fair} }
-\itemSep
-
- \bold{Adobt-A-Physicist} \hfill \date{October 2012} \\
- \desc{\rm \href{http://www.adoptaphysicist.org/}{http://www.adoptaphysicist.org/}}
- \itemSep
-
- \bold{President \desc{\footnotesize( Elected )}} \hfill \date{December 2011 --- February 2013} \\
-\desc{\emph{Society of Physics Students, University of Minnesota Duluth}}
-\itemSep
-
- \bold{Judge} \hfill \date{December 2011} \\
- \desc{\emph{Lakeview Christian Academy Science Fair}}
- \itemSep
-
- \bold{Volunteer} \hfill \date{May 2011}  \\
- \desc{\emph{Astronomy Day, University of Wisconsin---Eau Claire}}
- \itemSep
-
- \bold{President \desc{\footnotesize( Elected )}} \hfill \date{May 2010 --- May 2011} \\
-\desc{\emph{Society of Physics Students, University of Wisconsin---Eau Claire} }
-\itemSep
-
- \bold{Website Administrator \desc{\footnotesize( Elected )}} \hfill \date{May 2008 --- May 2010} \\
-\desc{\emph{Society of Physics Students, University of Wisconsin---Eau Claire} }
-\itemSep
-
- \bold{Freshman Senator \desc{\footnotesize( Elected )}} \hfill \date{September 2006 --- May 2007} \\
-\desc{\emph{Student Senate, Winona State University}
-	\begin{itemize}
-		\item Cultural Diversity Committee, Election Committee
-	\end{itemize}
-}
-
-
-\end{resume}
-
+  \item Election Committee
+  \item Cultural Diversity Committee
+\end{itemize}
+
+
+% .............................................................................
+% OUTREACH
+\section{Outreach}
+Judge, Northeastern Minnesota Regional Science Fair \hfill Feb. 2013 \\
+Adoptee, Adopt-A-Physicist \hfill Oct. 2012 \\
+Judge, Lakeview Christian Academy Science Fair \hfill Dec. 2011 \\
+Volunteer, UW--Eau Claire Astronomy Day \hfill May 2011
+
+
+% .............................................................................
+% PAPERS: PROCEEDINGS
+\section{Conference Proceedings}
+\begin{etaremune}
+  \item \bf J. A. Vasel \rm et al., \it Observing the Next Galactic Supernova \rm \hfill 2017 \\
+  \it with the NOvA Detectors, \rm \href{http://arxiv.org/abs/arXiv:1710.00705}{arXiv:1710.00705}.
+\end{etaremune}
+
+
+% .............................................................................
+% PAPERS: COLLABORATION
+\section{Publications from a Large Collaboration}
+\begin{etaremune}
+  \item P. Adamson et al., \it Search for active-sterile neutrino mixing using \rm \hfill 2017 \\
+  \it neutral-current interactions in NOvA, \rm \href{https://doi.org/10.1103/PhysRevD.96.072006}{10.1103/PhysRevD.96.072006}.
+  \item P. Adamson et al., \it Constraints on Oscillation Parameters from $\nu_e$ \rm \hfill 2017 \\
+  \it  Appearance and $\nu_\mu$ Disappearance in NOvA, \rm \href{https://doi.org/10.1103/PhysRevLett.118.231801}{10.1103/PhysRevLett.118.231801}.
+  \item P. Adamson et al., \it Measurement of the neutrino mixing angle $\theta_{23}$ \rm \hfill 2017 \\
+  \it in NOvA, \rm \href{https://doi.org/10.1103/PhysRevLett.118.151802}{10.1103/PhysRevLett.118.151802}.
+\end{etaremune}
+
+
+% .............................................................................
+% TALKS: INVITED
+\section{Invited Talks}
+\begin{etaremune}
+  \item \it New Perspectives, Fermilab \hfill June 2018 \rm
+  \item UW--Eau Claire ``Physics Thursday'' Department Seminar \hfill April 2013
+\end{etaremune}
+
+
+% .............................................................................
+% TALKS: CONFERENCE
+\section{Conference Talks \& Presentations}
+\begin{etaremune}
+  \item \it Neutrino 2018, Heidelberg, Germany \hfill June 2018 \rm
+  \item 50$^{\text{th}}$ Annual Users Meeting, Fermilab \hfill June 2017
+  \item INT Workshop (16-61W), University of Washington \hfill Aug. 2016
+  \item New Perspectives, Fermilab \hfill June 2016
+  \item American Physical Society April Meeting \hfill April 2016
+  \item American Physical Society April Meeting \hfill April 2013
+  \item American Astronomical Society 221${^\text{st}}$ Meeting \hfill Jan. 2013
+  \item American Astronomical Society 217${^\text{th}}$ Meeting \hfill Jan. 2011
+\end{etaremune}
+
+
+% .............................................................................
+% TALKS: INTERNAL
+\section{Internal Talks}
+\begin{etaremune}
+  \item Ph.D. Candidacy Seminar \hfill May 2016
+  \item M.S. Thesis Defense, University of Minnesota Duluth \hfill Aug. 2013
+  \item UW--Eau Claire ``Physics Thursday'' Department Seminar \hfill April 2011
+\end{etaremune}
+
+
+% .............................................................................
+% TALKS: PUBLIC
+\section{Public Talks}
+\begin{etaremune}
+  \item Fermilab ``Ask-A-Scientist'' lecture series \hfill Jan. 2017
+  \item Chippewa Valley Astronomical Society Northwoods Starfest \hfill Aug. 2013
+  \item ``Ask-A-Scientist'' lecture series, Eau Claire, WI \hfill Mar. 2013
+  \item UMD Astronomy Day, Duluth, MN \hfill April 2012
+\end{etaremune}
+
+
+% .............................................................................
+
+\end{cv}
 \end{document}
 
-%%===========================================================================%%
+% .............................................................................
