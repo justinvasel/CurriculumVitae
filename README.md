@@ -1,5 +1,9 @@
 # Justin Vasel's Curriculum Vitae
 
+![GitHub (pre-)release](https://img.shields.io/github/release/justinvasel/curriculum-vitae/all.svg)
+![Travis](https://img.shields.io/travis/justinvasel/curriculum-vitae.svg)
+
+
 This is my current Curriculum Vitae. I've made some slight modifications to the
 `res.cls` class and renamed it `cv.cls`. Other than that it's a fairly
 barebones template. If you want fancy font and color support you'll have to do
