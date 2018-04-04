@@ -5,6 +5,8 @@
 *.html
 *.log
 *.synctex.gz
+*.out
+*.xdv
 refs.tex
 res.cls
 sig.pdf
