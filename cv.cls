@@ -1,24 +1,150 @@
-%
 % CURRICULUM VITAE CUSTOM CLASS
-% Author: Justin Vasel -- 2013
-
+% This class is a slightly-altered version of the res.cls class.
+% Original copyright information is contained below.
+%    for LaTeX version 2.09
 
 \typeout{Document Style `cv'.}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% cv.sty
+% cv.cls
 %
-% \documentstyle{cv}
+% \documentstyle{res}
 %
+% Copyright (c) 1988 by Michael DeCorte
+% Permission to copy all or part of this work is granted, provided
+% that the copies are not made or distributed for resale, and that
+% the copyright notice and this notice are retained.
+%
+% THIS WORK IS PROVIDED ON AN "AS IS" BASIS.  THE AUTHOR PROVIDES NO
+% WARRANTY WHATSOEVER, EITHER EXPRESS OR IMPLIED, REGARDING THE WORK,
+% INCLUDING WARRANTIES WITH RESPECT TO ITS MERCHANTABILITY OR FITNESS
+% FOR ANY PARTICULAR PURPOSE.
+%
+% If you make any improvements, I'd like to hear about them.
+%
+% Michael DeCorte
+% P.O. Box 652
+% Potsdam NY 13676
+% mrd@sun.soe.clarkson.edu
+% mrd@clutx.bitnet
+%
+% Changes for LaTeX2e -- Venkat Krishnamurthy (Aug 7, 2001)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% You can have multiple style options the legal options ones are:
+%
+%   centered	the name and address are centered at the top of the
+%		page (default)
+%
+%   line	the name is the left with a horizontal line then
+%		the address to the right
+%
+%   overlapped	the section titles overlap the body text (default)
+%
+%   margin	the section titles are to the left of the body text
+%
+%   11pt	use 11 point fonts instead of 10 point fonts
+%
+%   12pt	use 12 point fonts instead of 10 point fonts
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %   Commands
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   \cv	prints the word cv but typeset nicely
+%
+%   \newsectionwidth{dimen}
+%		defines the amount of space the labels extend
+%		into the left margin.
+%		DO NOT TRY to change any of the dimensions
+%		yourself.  You will probably confuse the style file.
+%
+%   \name{text} defines your name
+%
+%   \address{text}
+%		defines your address
+%		this can be called twice if you have two addresses
+%		use \\'s to indicate where either line breaks or
+%		comas should go
+%
+%   \opening	this prints your name and address at that spot
+%		this is not normally needed, as \begin{cv}
+%		does this but is provided just in case you need
+%		to do something odd
+%
+%   \begin{cv} ... \end{cv}
+%		all of the cv should go inside of this
+%		environment
+%
+%   \section{text}
+%		This prints 'text' in the left hand margin.
+%		Its exact placement depends on what the style
+%		options has been set to. (overlapped or margin)
+%		You should use \\ to start a new line.	If the
+%		style option is margin, the \\ is converted
+%		to a space.
+%		To use this in any of the list environments, put
+%		the \section after the \item[] but before the
+%		text.
+%		Eg.
+%		\begin{itemize}
+%		\item\section{text}
+%		text
+%		\end{itemize}
+%
+%   \begin{ncolumn}{n} ... \end{ncolumn}
+%		creates a tabular environment with n equally
+%		spaced columns.  Separate columns by & and
+%		end them with \\
+%
+%   \begin{position} ... \end{position}
+%		this is used to print a job description.  There should
+%		be only one job description in it.  Information
+%		related to the job (such as title, dates...) will
+%		be printed.
+%
+%   \begin{format} ... \end{format}
+%		used to change the default format for the position
+%		environment.  Within it the recognized commands are:
+%		\title{option}
+%		\employer{option}
+%		\location{option}
+%		\dates{option}
+%		\body
+%		\\
+%		where option is one of l,r,c standing for left, right, center.
+%		The format will eventually be used to make several
+%		tabular environments and you are defining the number of columns
+%		and the placement of text within the columns of the tabulars.
+%		Each row is terminated by a \\.  Any number of options can
+%		be on a line, they will each be set in their own columns.
+%		Any of the options except \body may be left out.
+%
+%		Eg.
+%		\begin{format}
+%		\title{l}\employer{r}\\
+%		\dates{r}\\
+%		\body\\
+%		\location{l}\\
+%		\end{format}
+%
+%		In this example the title and employer information
+%		are set in 2 columns left justified and right justified
+%		respectively.  Then the date is set right justified.
+%		Then the body is set.  Then the location is set left
+%		justified.
+%
+% \employer{text}
+% \title{text}
+% \dates{text}
+% \location{text}
+%		declare text for the next invocation of the position
+%		environment
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Glue
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
+% sectionskip	the amount of horizontal before a section
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Dimensions
@@ -27,7 +153,7 @@
 % sectionwidth	the amount that the section titles go in the
 %		left margin
 %
-% resumewidth	the width of the total resume from the left
+% resumewidth	the width of the total cv from the left
 %		margin to the right.  Don't use textwidth
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -43,7 +169,16 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % THINGS TO DO
 %
-
+% add lm,rm options to format style to allow things to be placed
+% in the left or right margin respectively
+%
+% add capability so that \body doesn't have to be proceeded (followed)
+% by a \\ allowing part of the description (eg. location) to be the
+% first (last) thing of the body
+%
+% clean up the list building procedures
+%
+% write docs to tell people how to use this
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{cv}
@@ -51,145 +186,46 @@
 \PassOptionsToClass{12pt}{article}
 \LoadClassWithOptions{article}
 
-\nofiles	     % Supress creation of .aux files
-
-\RequirePackage{multicol}
-\RequirePackage{color}
-\RequirePackage[usenames,dvipsnames]{xcolor}
-\RequirePackage[colorlinks=true, pdfstartview=FitV, linkcolor=blue, citecolor=blue, urlcolor=BrickRed]{hyperref}
-
-
-
-%%%%%%%% NAME STUFF %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% ======================================================== %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % this is used to print the name and address at the top of
 % the page with a hline in between
 %
 \def\namefont{}
-\def\addressfont{}
-\def\namesize{\fontsize{40pt}{1em}}
-%\def\namesize{\Huge}
-
-\definecolor{light}{gray}{0.3}
-
+\def\namesize{\Large}
 \def\@linename{\begingroup
-  %\fullline
+  \def\\{, }
+  {\namesize\namefont\textsc{\@name}}
+  \vskip 12pt
+  \fullline
   \vskip 2pt
-  \namesize\namefont\hspace{3.5ex} {\@name}
-  \vskip 2pt
-  %\fullline
-  \vskip 2pt
-  \vspace{0.2in}
-  \leftskip=0in
   % where do you live?
   \@ifundefined{@addressone}{%
-  \section{Contact}
-    \normalsize
-    \vspace{-0.2in}
-    \begin{multicols}{2}
-      {\color{light} \addressfont
-      727 E. Third Street \\
-      Swain Hall West 117 \\
-      Bloomington, IN 47405 \normalfont} \\ 
-      \columnbreak
-      
-      {\color{light} \addressfont
-      \hspace{-0.8in}
-      \begin{tabular}{r l}
-	      Email: & jvasel{@}indiana.edu \\
-	      LinkedIn: & justinvasel \\
-	      Twitter: & @justinvasel 
-      \end{tabular}
-	  \normalfont}
-    \end{multicols}
+    % do nothing
   }{%
-    %
+    % PUT CODE HERE
   }
-  \vspace{-0.2in}
-  %\@website
 \endgroup}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% HEADINGS:
+%
 \let\print@name\@linename
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% use this to define your name
-%
-\def\name#1{\def\@name{#1}}
-\def\@name{}
-
-\def\website#1#2{\def\@website{\normalfont \large \emph{\href{#1}{#2} } \normalsize}}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% makes a line of width \textwidth starting at -\hoffset
-%
-\def\fullline{    % hrules only listen to \hoffset
-  \nointerlineskip  % so I have this code   
-  \moveleft\hoffset\vbox{\hrule width\textwidth} 
-  \nointerlineskip
-}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% use this to define your address, this may be called more than once.
-%
-\let\@addressone\relax
-\let\@addresstwo\relax
-
-\def\address#1{
-  \@ifundefined{@addressone}{\def\@addressone{#1}}{\def\@addresstwo{#1}}}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% if you want to print your name and address is a slightly
-% different format than sugessted, then this can be used
-% to place it exactly where you want
-%
-\def\opening{
-  \begingroup
-  \leftskip=-1.1in%-\hoffset     % I use leftskip to move things to the left as 
-  \advance\textwidth\hoffset % changing hoffset doesn't work. But this
-  \hsize=\textwidth      % doesn't really work as hboxes are rules
-           % are unaffeted
-  \let\par=\@@par
-  \parindent=0pt
-  \parskip=0pt
-  \print@name
-  \endgroup
-}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% all of the resume goes in the resume environment
-%
-\newenvironment{resume}{\begingroup
-           \opening
-}{\endgroup}
-
-
-
-
-
-
-%%%%%%%% SECTION STUFF %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% ======================================================== %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Use this to set the sectionwidth.
 % It adjust the width of the text as well as the hoffset
-% You probably shouldn't touch any of the size paramaters
+% You probably shouldn't touch any of the size parameters
 % unless you really understand all of this but it is not
 % hard.  Either way, it can only be executed once
 %
-\def\sectionfont{\bf}
+\def\sectionfont{\sc}
 \newdimen\sectionwidth
 \newskip\sectionskip
 \newdimen\resumewidth
 
-\resumewidth=6.5in
-\sectionskip=0.4in
+\resumewidth=7.5in
+\sectionskip=3.5ex plus 1ex minus -.2ex % values stolen from LaTeX
 
 \def\newsectionwidth#1{%
 		     \sectionwidth=#1
@@ -202,7 +238,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % This is for sectiontitles that are entirely in the left margin.
-% multiline sectiontitles are permited and will be broken by
+% multiline sectiontitles are permitted and will be broken by
 % \TeX{} to fit into a box \verb|\sectionwidth| wide.  It is advised
 % that \verb|\\| be used to break the lines by hand as \TeX{} will
 % probably not do what you want.
@@ -220,11 +256,11 @@
 %
 \def\boxed@sectiontitle#1{%
   % this macro may be called in a tabular.  Special code must be written
-  % to accomodate this.  In LaTeX, a tabular is made out of hboxes.
+  % to accommodate this.  In LaTeX, a tabular is made out of hboxes.
   % TeX never goes into horizontal mode because of this; it only
-  % gets into vertical mode and restricted horizontal mode.  Certain 
+  % gets into vertical mode and restricted horizontal mode.  Certain
   % indenting problems must be handled because of this.  They
-  % are delt with at the end of this routine.
+  % are dealt with at the end of this routine.
   % It is also necessary to close the hbox that was created before
   % the \section and create a new one when this macro has ended.
   % This macro therefore simulates a \kill, so that any text before
@@ -234,7 +270,7 @@
   % \section{foo}
   % more text\\
   % ...
-  \ifx\\\@tabcr    % is this in a tabular? (this *should* work but is a cludge)
+  \ifx\\\@tabcr    % is this in a tabular? (this *should* work but is a kludge)
     \@stopfield    % the is the first part of a \kill
    \else
      \@@par	     % This will end the previous paragraph if needed and
@@ -267,7 +303,7 @@
       \raggedright     % you don't want this filled out to the right margin
       \sectionfont
       #1\vss	       % Go into horizontal mode; do the paragraph;
-		       % go into vertical mode; add some negative glue 
+		       % go into vertical mode; add some negative glue
 		       % to give a box of 0pt height and depth
     }%
   }%
@@ -287,13 +323,13 @@
 		       % previous box would be off as the baselines of the
 		       % this box (the one that being made above) and the
 		       % previous line would be separated by \baselineskip
-		       % (probably, it may be separted by the depth of the
+		       % (probably, it may be separated by the depth of the
 		       % previous box + \lineskip) but as the baseline of
 		       % this box has been moved to the top, the box's would
-		       % separted by to much glue.  The exact amount being
+		       % separated by to much glue.  The exact amount being
 		       % the height of this box.
   \endgroup
-  \ifx\\\@tabcr   % is this in a tabular? (this *should* work but is a cludge)
+  \ifx\\\@tabcr   % is this in a tabular? (this *should* work but is a kludge)
     % this is the second part of the \kill; it starts the next tabbing line
     % Because this routine will never get into paragraph mode when used in
     % tabbing the \parskip that is discussed below will never be inserted.
@@ -305,7 +341,7 @@
 		       % Right before being contributed though a \vskip\parskip
 		       % will be inserted.  This is to negate it.
 		       %
-		       % I do consider this to be a bit of a cludge but
+		       % I do consider this to be a bit of a kludge but
 		       % I can not find a way to write \unskipfutureskip
 		       % or a way to make TeX think that nothing has
 		       % been contributed to the page list.
@@ -319,6 +355,55 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% makes a line of width \textwidth starting at -\hoffset
+%
+\def\fullline{		% hrules only listen to \hoffset
+  \nointerlineskip	% so I have this code
+  \moveleft\hoffset\vbox{\hrule width\textwidth}
+  \nointerlineskip
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% use this to define your name
+%
+\def\name#1{\def\@name{#1}}
+
+\def\@name{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% use this to define your address, this may be called more than once.
+%
+\let\@addressone\relax
+\let\@addresstwo\relax
+
+\def\address#1{
+  \@ifundefined{@addressone}{\def\@addressone{#1}}{\def\@addresstwo{#1}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% if you want to print your name and address is a slightly
+% different format than suggested, then this can be used
+% to place it exactly where you want
+%
+\def\opening{
+  \begingroup
+  \leftskip=12em
+  \advance\textwidth\hoffset
+  \hsize=\textwidth
+  \let\par=\@@par
+  \parindent=0pt
+  \parskip=0pt
+  \print@name
+  \endgroup
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% all of the cv goes in the cv environment
+%
+\newenvironment{cv}{\begingroup
+	\opening
+}{\endgroup}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % DEFAULTS
 %
 
@@ -329,20 +414,19 @@
 \textheight 9in
 \parindent 0pt
 \topmargin 0in
-\oddsidemargin 0pt
-\evensidemargin 0pt
+\oddsidemargin -0.5in
+\evensidemargin -0.5in
 \marginparwidth 0pt
 \parindent 0pt
 \parskip \baselineskip
 \setcounter{secnumdepth}{0}
 \def\@listI{\leftmargin\leftmargini
-  \topsep 0pt 
-  \parskip 0pt
-  \partopsep 2pt plus 2pt
-  \parsep 2pt plus 2pt
-  \itemsep \parsep}
+\topsep 0pt
+\parskip 0pt
+\partopsep 2pt plus 2pt
+\parsep 2pt plus 2pt
+\itemsep \parsep}
 
 \pagestyle{empty}  % don't want page numbers
 
 \let\section\@@section
-

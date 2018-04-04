@@ -1,11 +1,18 @@
+# Directories
+versions
+
+# OS-related
 .DS_Store
+
+# TeX garbage
 *.aux
 *.fdb_latexmk
 *.fls
 *.html
 *.log
 *.synctex.gz
-refs.tex
-res.cls
-sig.pdf
+*.out
+*.xdv
+
+# Output
 jvasel_cv.pdf
