@@ -38,6 +38,7 @@ make nuke
 
 To work out of the box, make sure you have these packages installed.
 
+ * **xcolor** — More colors! And how!
  * **hyperref** — Formatting hyperlinks
  * **amsmath** — Mathematics
  * **babel** — Special character typesetting (you may not need this)
